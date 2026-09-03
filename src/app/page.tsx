@@ -77,14 +77,9 @@ export default function HomePage() {
                 <p className="prose-body mt-3 text-[0.96875rem] leading-[1.6]">
                   {division.summary}
                 </p>
-                <ul className="mt-5 flex flex-col gap-2.5 border-t border-hairline pt-5 text-[0.9375rem] text-ink">
+                <ul className="list-square mt-5 flex flex-col gap-2.5 border-t border-hairline pt-5 text-[0.9375rem] text-ink">
                   {division.bullets.map((bullet) => (
-                    <li key={bullet} className="flex gap-3">
-                      <span aria-hidden className="text-accent">
-                        —
-                      </span>
-                      {bullet}
-                    </li>
+                    <li key={bullet}>{bullet}</li>
                   ))}
                 </ul>
                 <Button

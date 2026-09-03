@@ -170,6 +170,31 @@
   }
 
   /*
+    Odrážka — plný čtvereček v akcentní modré.
+    Ostré hrany podle pravidla 01, modrá jen jako akcent podle pravidla 03.
+  */
+  .list-square {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .list-square > li {
+    position: relative;
+    padding-left: 1.375rem;
+  }
+
+  .list-square > li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    /* Opticky na účaří prvního řádku, ne na jeho vrcholu. */
+    top: 0.52em;
+    width: 7px;
+    height: 7px;
+    background: var(--c-accent);
+  }
+
+  /*
     Výška hero fotografie. Záměrně vlastní třída, ne arbitrary Tailwind utilita
     předávaná propem — hero obrázek nesmí zkolabovat na nulovou výšku.
   */
