@@ -1,31 +1,33 @@
 /**
  * Jediný zdroj pravdy pro obsah webu.
- * Texty a čísla jsou převzaté z wireframu "TIS Homepage Wireframe.dc.html".
+ * Texty vychází z wireframu "TIS Homepage Wireframe.dc.html",
+ * reference a fotografie jsou převzaté z tis-cr.eu.
  *
- * TODO(obsah): telefon je ve wireframu placeholder — doplnit skutečné číslo.
+ * TODO(obsah): ověřit DIČ — IČ je 05613566, plátcovství DPH nepotvrzeno.
+ * TODO(obsah): ověřit e-mail, až bude v provozu doména tis-construction.cz.
  */
 
 export const site = {
-  name: "TIS – CR s.r.o.",
+  name: "TIS Construction s.r.o.",
   shortName: "TIS Construction",
   tagline: "Strojní a stavební realizace",
   description:
     "Dopravní systémy pro sypké materiály, ocelové konstrukce a kompletní stavební práce. Od projektu po předání. Chrudim, od roku 1997.",
-  url: "https://www.tis-cr.eu",
+  url: "https://tis-construction.cz",
   locale: "cs_CZ",
   founded: 1997,
 } as const;
 
 export const contact = {
   email: "info@tis-cr.eu",
-  /** TODO(obsah): ve wireframu placeholder +420 000 000 000 */
-  phone: "+420 000 000 000",
-  phoneHref: "tel:+420000000000",
+  phone: "+420 739 065 563",
+  phoneHref: "tel:+420739065563",
   street: "Štěpánkova 142",
   postalCode: "537 01",
   city: "Chrudim",
-  ico: "25260103",
-  dic: "CZ25260103",
+  ico: "05613566",
+  /** Doplnit, až bude potvrzené plátcovství DPH. */
+  dic: null as string | null,
 } as const;
 
 export type NavItem = { href: string; label: string };
@@ -70,6 +72,9 @@ export type Division = {
   scope: string[];
   photoLabel: string;
   heroPhotoLabel: string;
+  /** Cesty do /public/photos; dokud chybí, vykreslí se zástupný blok. */
+  photo?: string;
+  heroPhoto?: string;
   activitiesEyebrow: string;
   activitiesTitle: string;
   activities: { number: string; title: string; text: string }[];
@@ -100,8 +105,10 @@ export const divisions: Division[] = [
       "Technologická doprava a náhradní díly",
     ],
     scope: ["Projekce", "Výroba", "Montáž", "Servis", "Náhradní díly"],
-    photoLabel: "Foto — ocelová konstrukce",
-    heroPhotoLabel: "Foto — dálková pásová doprava",
+    photoLabel: "Jeřáb usazuje ocelovou konstrukci dopravníkového mostu",
+    heroPhotoLabel: "Zastřešený pásový dopravník s obslužnou lávkou",
+    photo: "/photos/ref-ocelove-konstrukce.webp",
+    heroPhoto: "/photos/ref-technologicka-doprava.webp",
     activitiesEyebrow: "01 — Co dodáváme",
     activitiesTitle: "Přehled činností",
     activities: [
@@ -179,8 +186,10 @@ export const divisions: Division[] = [
       "Rekonstrukce",
       "Dokončovací práce",
     ],
-    photoLabel: "Foto — stavba / hala",
-    heroPhotoLabel: "Foto — stavba haly",
+    photoLabel: "Dokončená ocelová hala v Havlíčkově Brodě",
+    heroPhotoLabel: "Letecký pohled na dokončenou zemědělskou stáj",
+    photo: "/photos/ref-hala-havlickuv-brod.webp",
+    heroPhoto: "/photos/ref-staj-mlady-skot.webp",
     activitiesEyebrow: "01 — Co stavíme",
     activitiesTitle: "Typy staveb",
     activities: [
@@ -243,56 +252,157 @@ export function getDivision(slug: string): Division | undefined {
 
 export type Reference = {
   slug: string;
-  year: string;
+  /** Volitelný — u části realizací není rok uvedený. */
+  year?: string;
   category: ReferenceCategory;
   /** Krátký štítek nad názvem, např. "SUŠÁRNA" nebo "REKONSTRUKCE" */
   tag: string;
   title: string;
+  photo?: string;
+  /** Popis fotografie pro alt text */
+  alt?: string;
 };
 
-/** TODO(obsah): doplnit skutečný seznam realizací a fotografie. */
+/**
+ * Skutečné realizace převzaté z tis-cr.eu (stránky Strojní a Stavební činnosti).
+ * Fotografie leží v /public/photos.
+ */
 export const references: Reference[] = [
+  // --- Stavební ---
   {
     slug: "rekonstrukce-hotelu-kraskov",
-    year: "2022",
     category: "Stavební",
     tag: "Rekonstrukce",
-    title: "Rekonstrukce hotelu Kraskov",
+    title: "Kompletní rekonstrukce hotelu Kraskov",
+    photo: "/photos/ref-hotel-kraskov.webp",
+    alt: "Zrekonstruovaná budova hotelu Kraskov s upraveným předprostorem",
+  },
+  {
+    slug: "administrativni-budova-posivalka",
+    category: "Stavební",
+    tag: "Administrativa",
+    title: "Administrativní budova Pošívalka u Chroustovic",
+    photo: "/photos/ref-administrativni-budova-posivalka.webp",
+    alt: "Novostavba administrativní budovy",
+  },
+  {
+    slug: "chatky-kraskov",
+    category: "Stavební",
+    tag: "Rekonstrukce",
+    title: "Rekonstrukce deseti chatek u hotelu Kraskov",
+    photo: "/photos/ref-chatky-kraskov.webp",
+    alt: "Zrekonstruované rekreační chatky",
+  },
+  {
+    slug: "wellness-chrudim",
+    year: "2019",
+    category: "Stavební",
+    tag: "Wellness",
+    title: "Rozšíření sauny o wellness prvky, Chrudim",
+    photo: "/photos/ref-wellness-chrudim.webp",
+    alt: "Nové wellness prostory městské sauny",
+  },
+  {
+    slug: "autosalon-pardubice",
+    year: "2015–2016",
+    category: "Stavební",
+    tag: "Autosalon",
+    title: "Výstavba autosalonu AUTO IN Pardubice",
+    photo: "/photos/ref-autosalon-pardubice.webp",
+    alt: "Dokončený autosalon s prosklenou showroomovou částí",
+  },
+  {
+    slug: "prejezd-slatinany",
+    year: "2015",
+    category: "Stavební",
+    tag: "Infrastruktura",
+    title: "Renovace železničního přejezdu Slatiňany",
+    photo: "/photos/ref-prejezd-slatinany.webp",
+    alt: "Zrenovovaný železniční přejezd",
   },
   {
     slug: "ocelova-hala-havlickuv-brod",
     year: "2019",
     category: "Stavební",
     tag: "Hala",
-    title: "Ocelová hala Havlíčkův Brod",
+    title: "Výstavba ocelové haly v Havlíčkově Brodě",
+    photo: "/photos/ref-hala-havlickuv-brod.webp",
+    alt: "Dokončená ocelová hala s šedým opláštěním a řadou vrat",
   },
   {
-    slug: "susarna-zrnin-kocbere",
-    year: "2020",
-    category: "Strojní",
-    tag: "Sušárna",
-    title: "Sušárna zrnin Kocbeře",
-  },
-  {
-    slug: "zauhlovaci-trasa-teplarny",
-    year: "2018",
-    category: "Strojní",
-    tag: "Dopravníky",
-    title: "Zauhlovací trasa teplárny",
-  },
-  {
-    slug: "ocelova-konstrukce-zasobniku",
-    year: "2021",
-    category: "Strojní",
-    tag: "OK",
-    title: "Ocelová konstrukce zásobníku",
-  },
-  {
-    slug: "rodinny-dum-chrudim",
-    year: "2023",
+    slug: "hala-stoky",
+    year: "2019",
     category: "Stavební",
-    tag: "RD",
-    title: "Rodinný dům Chrudim",
+    tag: "Hala",
+    title: "Výstavba haly Štoky",
+    photo: "/photos/ref-hala-stoky.webp",
+    alt: "Novostavba průmyslové haly",
+  },
+  {
+    slug: "staj-pro-mlady-skot",
+    category: "Stavební",
+    tag: "Zemědělská stavba",
+    title: "Výstavba stáje pro mladý skot",
+    photo: "/photos/ref-staj-mlady-skot.webp",
+    alt: "Letecký pohled na dokončenou zemědělskou stáj",
+  },
+
+  // --- Strojní ---
+  {
+    slug: "dalkova-pasova-doprava",
+    category: "Strojní",
+    tag: "Pásová doprava",
+    title: "Dálková pásová doprava",
+    photo: "/photos/ref-pasova-doprava.webp",
+    alt: "Zakladač a pásové dopravníky na povrchovém dole",
+  },
+  {
+    slug: "montaz-pasove-dopravy",
+    category: "Strojní",
+    tag: "Montáž",
+    title: "Montáž dálkové pásové dopravy",
+    photo: "/photos/ref-vyroba-dopravniku.webp",
+    alt: "Rozestavěné trasy pásových dopravníků s válečkovými stolicemi",
+  },
+  {
+    slug: "technologicka-doprava",
+    category: "Strojní",
+    tag: "Technologická doprava",
+    title: "Technologická doprava",
+    photo: "/photos/ref-technologicka-doprava.webp",
+    alt: "Zastřešený pásový dopravník s obslužnou lávkou",
+  },
+  {
+    slug: "ocelove-konstrukce",
+    category: "Strojní",
+    tag: "Ocelové konstrukce",
+    title: "Dodávka a montáž ocelových konstrukcí",
+    photo: "/photos/ref-ocelove-konstrukce.webp",
+    alt: "Jeřáb usazuje příhradovou ocelovou konstrukci dopravníkového mostu",
+  },
+  {
+    slug: "zemedelska-technologie",
+    category: "Strojní",
+    tag: "Zemědělství",
+    title: "Technologie pro zemědělský průmysl",
+    photo: "/photos/ref-zemedelska-technologie.webp",
+    alt: "Technologie pro skladování a dopravu zrnin",
+  },
+  {
+    slug: "nahradni-dily",
+    category: "Strojní",
+    tag: "Náhradní díly",
+    title: "Dodávka náhradních dílů",
+    photo: "/photos/ref-nahradni-dily.webp",
+    alt: "Pojezdová kola, podvozky a díly brzd hlavních pohonů",
+  },
+  {
+    slug: "oprava-strechy-vresova",
+    category: "Strojní",
+    tag: "Ocelové konstrukce",
+    title: "Oprava střechy generátorovny Vřesová",
+    photo: "/photos/ref-oprava-strechy-vresova.webp",
+    alt: "Oprava zastřešení průmyslové generátorovny",
   },
 ];
 

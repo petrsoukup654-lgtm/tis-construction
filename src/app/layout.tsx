@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Barlow, Barlow_Semi_Condensed, IBM_Plex_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { contact, site } from "@/lib/site";
@@ -55,7 +57,7 @@ const organizationSchema = {
   email: contact.email,
   telephone: contact.phone,
   foundingDate: String(site.founded),
-  vatID: contact.dic,
+  ...(contact.dic ? { vatID: contact.dic } : {}),
   taxID: contact.ico,
   address: {
     "@type": "PostalAddress",
@@ -85,6 +87,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
         </main>
         <Footer />
+        <Analytics />
+        <SpeedInsights />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

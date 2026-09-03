@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { ReactNode } from "react";
 
 /**
@@ -71,6 +72,44 @@ export function PhotoPlaceholder({
       className={`photo-placeholder label-mono flex items-center justify-center border border-border text-center text-muted ${ratio} ${className}`}
     >
       {label}
+    </div>
+  );
+}
+
+/**
+ * Fotografie s plynulým přechodem na zástupný blok.
+ * Dokud slot nemá `src`, vykreslí se šrafování z wireframu — díky tomu
+ * jde web nasadit i s neúplnou fotobankou.
+ */
+export function Photo({
+  src,
+  alt,
+  ratio = "aspect-[16/9]",
+  className = "",
+  sizes = "100vw",
+  priority = false,
+}: {
+  src?: string;
+  alt: string;
+  ratio?: string;
+  className?: string;
+  sizes?: string;
+  priority?: boolean;
+}) {
+  if (!src) {
+    return <PhotoPlaceholder label={alt} ratio={ratio} className={className} />;
+  }
+
+  return (
+    <div className={`relative overflow-hidden ${ratio} ${className}`}>
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        sizes={sizes}
+        priority={priority}
+        className="object-cover"
+      />
     </div>
   );
 }

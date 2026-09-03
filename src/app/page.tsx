@@ -2,7 +2,7 @@ import Link from "next/link";
 import { about, contact, divisions, references, site } from "@/lib/site";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { PhotoPlaceholder, SectionHeading } from "@/components/ui/Section";
+import { Photo, SectionHeading } from "@/components/ui/Section";
 import { ReferenceGrid, StatBar } from "@/components/Blocks";
 import { ContactForm } from "@/components/ContactForm";
 
@@ -34,10 +34,13 @@ export default function HomePage() {
               </Button>
             </div>
           </div>
-          <PhotoPlaceholder
-            label="Foto — pásový dopravník"
+          <Photo
+            src="/photos/ref-pasova-doprava.webp"
+            alt="Zakladač a pásové dopravníky pro přepravu sypkých materiálů"
             ratio="min-h-[280px] lg:min-h-[360px]"
-            className="border-0 border-l border-border"
+            sizes="(max-width: 1024px) 100vw, 48vw"
+            priority
+            className="border-l border-border"
           />
         </div>
       </section>
@@ -55,10 +58,12 @@ export default function HomePage() {
               key={division.slug}
               className="border border-t-[3px] border-border border-t-accent bg-surface"
             >
-              <PhotoPlaceholder
-                label={division.photoLabel}
+              <Photo
+                src={division.photo}
+                alt={division.photoLabel}
                 ratio="h-[180px]"
-                className="border-0 border-b border-border"
+                sizes="(max-width: 768px) 100vw, 40vw"
+                className="border-b border-border"
               />
               <div className="px-6 pb-7 pt-7">
                 <p className="label-mono tracking-[0.18em] text-accent">

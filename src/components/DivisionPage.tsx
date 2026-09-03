@@ -2,7 +2,7 @@ import type { Division } from "@/lib/site";
 import { contact, references } from "@/lib/site";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { PhotoPlaceholder, SectionHeading } from "@/components/ui/Section";
+import { Photo, SectionHeading } from "@/components/ui/Section";
 import { Breadcrumbs, ProcessList, ReferenceGrid, ScopeBar } from "@/components/Blocks";
 
 /**
@@ -35,10 +35,13 @@ export function DivisionPage({ division }: { division: Division }) {
             </Button>
           </div>
         </div>
-        <PhotoPlaceholder
-          label={division.heroPhotoLabel}
+        <Photo
+          src={division.heroPhoto}
+          alt={division.heroPhotoLabel}
           ratio="min-h-[260px] lg:min-h-[340px]"
-          className="border-0 border-border lg:border-l"
+          sizes="(max-width: 1024px) 100vw, 44vw"
+          priority
+          className="border-border lg:border-l"
         />
       </div>
 

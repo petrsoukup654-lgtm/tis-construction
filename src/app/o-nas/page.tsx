@@ -3,7 +3,7 @@ import { about, contact, divisions, site, stats } from "@/lib/site";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Breadcrumbs } from "@/components/Blocks";
-import { PhotoPlaceholder } from "@/components/ui/Section";
+import { Photo } from "@/components/ui/Section";
 
 export const metadata: Metadata = {
   title: "O nás",
@@ -69,9 +69,12 @@ export default function ONasPage() {
               Nezávazná poptávka
             </Button>
           </div>
-          <PhotoPlaceholder
-            label="Foto — provoz / tým"
+          <Photo
+            src="/photos/ref-vyroba-dopravniku.webp"
+            alt="Montáž rozsáhlé trasy pásové dopravy"
             ratio="aspect-[4/3]"
+            sizes="(max-width: 1024px) 100vw, 48vw"
+            className="border border-border"
           />
         </Container>
       </section>

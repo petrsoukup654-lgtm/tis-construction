@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Reference } from "@/lib/site";
 import { stats } from "@/lib/site";
 import { Container } from "@/components/ui/Container";
-import { PhotoPlaceholder } from "@/components/ui/Section";
+import { Photo } from "@/components/ui/Section";
 
 /** Pruh se čtyřmi čísly pod herem. */
 export function StatBar() {
@@ -68,9 +68,15 @@ export function ProcessList({
 export function ReferenceCard({ reference }: { reference: Reference }) {
   return (
     <article>
-      <PhotoPlaceholder label="Foto 4:3" ratio="aspect-[4/3]" />
+      <Photo
+        src={reference.photo}
+        alt={reference.alt ?? reference.title}
+        ratio="aspect-[4/3]"
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        className="border border-border"
+      />
       <p className="label-mono mt-3 text-muted">
-        {reference.year} · {reference.tag}
+        {reference.year ? `${reference.year} · ${reference.tag}` : reference.tag}
       </p>
       <h3 className="h-card mt-1 text-[1.1875rem] font-semibold text-ink">
         {reference.title}

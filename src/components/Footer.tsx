@@ -19,7 +19,8 @@ export function Footer() {
             <address className="mt-4 text-[0.90625rem] not-italic leading-[1.7] text-muted">
               {contact.street}, {contact.postalCode} {contact.city}
               <br />
-              IČ {contact.ico} · DIČ {contact.dic}
+              IČ {contact.ico}
+              {contact.dic ? ` · DIČ ${contact.dic}` : ""}
             </address>
           </div>
 

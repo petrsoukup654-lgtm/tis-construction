@@ -1,6 +1,6 @@
 # TIS Construction
 
-Web společnosti **TIS – CR s.r.o.** (TIS Construction), Chrudim.
+Web společnosti **TIS Construction s.r.o.**, Chrudim.
 
 ## Stack
 
@@ -31,10 +31,11 @@ Web běží na [http://localhost:3000](http://localhost:3000).
 src/
   app/            stránky (App Router), API route poptávky, sitemap, robots
   components/     Header, Footer, DivisionPage, Blocks, ContactForm
-    ui/           Container, Button, Section, PhotoPlaceholder
+    ui/           Container, Button, Section, Photo
   lib/site.ts     veškerý obsah webu na jednom místě
 design/           zdrojový návrh z Claude Design (není součástí aplikace)
 public/brand/     logo a brandové soubory
+public/photos/    fotografie realizací
 ```
 
 Obsah se needituje v komponentách — všechny texty, kontakty, divize
@@ -61,6 +62,15 @@ verzálkami a condensed, běžný text nikdy verzálkami.
 | Hlavička je tmavá na všech stránkách | Wireframe má na světlé homepage bílou hlavičku a na tmavých podstránkách tmavou. Jednotná tmavá hlavička navazuje na tmavý hero a nemění barvu při přechodu mezi stránkami. |
 | Reference mají vlastní stránku `/reference` | Wireframe na ni odkazuje tlačítkem „Všechny realizace“, ale samotnou stránku nezobrazuje. |
 
+## Fotografie
+
+Všechny fotografie jsou **skutečné snímky realizací** převzaté z [tis-cr.eu](https://www.tis-cr.eu)
+(stránky Strojní a Stavební činnosti) v originálním rozlišení 1500–1920 px. Leží
+v `public/photos/` a vykresluje je komponenta `Photo`.
+
+`Photo` bez `src` spadne zpět na šrafovaný zástupný blok z wireframu — díky tomu
+jde přidávat nové realizace postupně, aniž by se rozbil layout.
+
 ## Poptávkový formulář
 
 Formulář posílá `POST /api/poptavka`. Odesílání běží přes [Resend](https://resend.com)
@@ -77,14 +87,18 @@ POPTAVKA_TO=info@tis-cr.eu
 **Dokud proměnné nejsou nastavené, formulář uživateli vrátí hlášku s e-mailovým
 kontaktem** místo tichého selhání.
 
+## Analytika
+
+Vercel Analytics a Speed Insights jsou zapojené v `src/app/layout.tsx`. Obojí je
+cookieless, takže web zatím nepotřebuje cookie lištu. Sběr dat se zapíná
+v nastavení projektu na Vercelu.
+
 ## Co ještě chybí
 
-- [ ] Skutečné telefonní číslo (v návrhu je placeholder `+420 000 000 000`)
-- [ ] Ověřit IČ — návrh uvádí `25260103`, starší web TIS Recyklace uvádí `11942070`
-- [ ] Fotografie (zatím šrafované zástupné bloky s popisky rozměrů)
-- [ ] Skutečný seznam realizací
-- [ ] Doména a nastavení `site.url` v `src/lib/site.ts`
-- [ ] Rozhodnout o analytice a případné cookie liště
+- [ ] Ověřit DIČ — IČ je `05613566`, plátcovství DPH nepotvrzeno (zatím se nezobrazuje)
+- [ ] Ověřit e-mail po nasazení domény `tis-construction.cz` (teď `info@tis-cr.eu`)
+- [ ] Roky u části realizací (hotel Kraskov, Pošívalka, chatky, stáj)
+- [ ] Nastavit `RESEND_API_KEY` a `POPTAVKA_FROM` ve Vercelu
 
 ## Nasazení
 
