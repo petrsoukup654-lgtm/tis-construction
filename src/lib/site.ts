@@ -39,6 +39,41 @@ export const inquiry = {
   email: "tomasimlauf@tis-cr.eu",
 } as const;
 
+
+export type Person = {
+  name: string;
+  role: string;
+  phone: string;
+  email: string;
+};
+
+/** Kontaktní osoby na stránce Kontakt. */
+export const people: Person[] = [
+  {
+    name: "Ing. Tomáš Imlauf",
+    role: "Jednatel společnosti",
+    phone: "+420 739 065 563",
+    email: "tomasimlauf@tis-cr.eu",
+  },
+  {
+    name: "Ing. Ladislav Forman",
+    role: "Vedoucí projekce",
+    phone: "+420 732 498 124",
+    email: "forman@tis-cr.eu",
+  },
+  {
+    name: "Jiří Holík",
+    role: "Řízení staveb",
+    phone: "+420 724 706 103",
+    email: "jiriholik@tis-cr.eu",
+  },
+];
+
+/** Telefon zapsaný pro odkaz tel: — bez mezer. */
+export function telHref(phone: string): string {
+  return `tel:${phone.replace(/\s+/g, "")}`;
+}
+
 export type NavItem = { href: string; label: string };
 
 export const nav: NavItem[] = [

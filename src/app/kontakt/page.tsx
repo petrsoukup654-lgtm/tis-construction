@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { contact, site } from "@/lib/site";
+import { contact, people, site, telHref } from "@/lib/site";
 import { Container } from "@/components/ui/Container";
 import { Breadcrumbs } from "@/components/Blocks";
 import { ContactForm } from "@/components/ContactForm";
@@ -93,6 +93,55 @@ export default function KontaktPage() {
               <ContactForm />
             </div>
           </div>
+        </Container>
+      </section>
+
+      <section className="border-t border-border bg-surface">
+        <Container className="py-16">
+          <p className="eyebrow text-accent">Kdo se vám ozve</p>
+          <h2 className="h-section mt-2.5 text-[2rem] text-ink">
+            Kontaktní osoby
+          </h2>
+
+          <ul className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {people.map((person) => (
+              <li
+                key={person.email}
+                className="border border-t-[3px] border-border border-t-accent bg-bg p-6"
+              >
+                <p className="label-mono tracking-[0.16em] text-accent">
+                  {person.role}
+                </p>
+                <h3 className="h-card mt-2 text-[1.375rem] text-ink">
+                  {person.name}
+                </h3>
+                <dl className="mt-5 flex flex-col gap-3 border-t border-hairline pt-5 text-[0.9375rem]">
+                  <div>
+                    <dt className="label-mono text-muted">Telefon</dt>
+                    <dd className="mt-0.5">
+                      <a
+                        href={telHref(person.phone)}
+                        className="text-accent hover:underline"
+                      >
+                        {person.phone}
+                      </a>
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="label-mono text-muted">E-mail</dt>
+                    <dd className="mt-0.5 break-words">
+                      <a
+                        href={`mailto:${person.email}`}
+                        className="text-accent hover:underline"
+                      >
+                        {person.email}
+                      </a>
+                    </dd>
+                  </div>
+                </dl>
+              </li>
+            ))}
+          </ul>
         </Container>
       </section>
     </>
