@@ -38,7 +38,7 @@ export function DivisionPage({ division }: { division: Division }) {
         <Photo
           src={division.heroPhoto}
           alt={division.heroPhotoLabel}
-          ratio="min-h-[260px] lg:min-h-[340px]"
+          ratio="hero-photo--sub"
           sizes="(max-width: 1024px) 100vw, 44vw"
           priority
           className="border-border lg:border-l"

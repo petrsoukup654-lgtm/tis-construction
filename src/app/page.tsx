@@ -35,12 +35,12 @@ export default function HomePage() {
             </div>
           </div>
           <Photo
-            src="/photos/ref-pasova-doprava.webp"
-            alt="Zakladač a pásové dopravníky pro přepravu sypkých materiálů"
-            ratio="min-h-[280px] lg:min-h-[360px]"
+            src="/photos/hero-montaz-dopravniku.webp"
+            alt="Jeřáb usazuje obloukový dopravníkový most na ocelové podpěry"
+            ratio="hero-photo"
             sizes="(max-width: 1024px) 100vw, 48vw"
             priority
-            className="border-l border-border"
+            blend
           />
         </div>
       </section>

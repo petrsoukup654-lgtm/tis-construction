@@ -88,6 +88,8 @@ export function Photo({
   className = "",
   sizes = "100vw",
   priority = false,
+  blend = false,
+  objectPosition = "object-center",
 }: {
   src?: string;
   alt: string;
@@ -95,20 +97,27 @@ export function Photo({
   className?: string;
   sizes?: string;
   priority?: boolean;
+  /** Průmyslové ztmavení, aby fotka splynula s tmavým hero panelem. */
+  blend?: boolean;
+  objectPosition?: string;
 }) {
   if (!src) {
     return <PhotoPlaceholder label={alt} ratio={ratio} className={className} />;
   }
 
   return (
-    <div className={`relative overflow-hidden ${ratio} ${className}`}>
+    <div
+      className={`relative overflow-hidden ${ratio} ${
+        blend ? "photo-blend" : ""
+      } ${className}`}
+    >
       <Image
         src={src}
         alt={alt}
         fill
         sizes={sizes}
         priority={priority}
-        className="object-cover"
+        className={`object-cover ${objectPosition}`}
       />
     </div>
   );
