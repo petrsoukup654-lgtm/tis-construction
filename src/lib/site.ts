@@ -30,6 +30,15 @@ export const contact = {
   dic: null as string | null,
 } as const;
 
+/**
+ * Kam chodí poptávky z formuláře. Záměrně oddělené od veřejného
+ * kontaktního e-mailu — ten zůstává na webu, tohle je interní adresát.
+ * Lze přebít proměnnou POPTAVKA_TO.
+ */
+export const inquiry = {
+  email: "tomasimlauf@tis-cr.eu",
+} as const;
+
 export type NavItem = { href: string; label: string };
 
 export const nav: NavItem[] = [

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { contact } from "@/lib/site";
 import { SubmitButton } from "@/components/ui/Button";
 
@@ -12,6 +12,14 @@ const fieldClass =
 export function ContactForm({ id }: { id?: string }) {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
+  // Kdy se formulář zobrazil uživateli — server podle toho pozná okamžité
+  // odeslání, které nepatří člověku. Měříme až po hydrataci, aby render
+  // zůstal čistý.
+  const shownAt = useRef<number | null>(null);
+
+  useEffect(() => {
+    shownAt.current = Date.now();
+  }, []);
 
   async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -29,7 +37,8 @@ export function ContactForm({ id }: { id?: string }) {
           name: data.get("name"),
           contact: data.get("contact"),
           message: data.get("message"),
-          website: data.get("website"),
+          zprava_kontrola: data.get("zprava_kontrola"),
+          elapsedMs: shownAt.current ? Date.now() - shownAt.current : null,
         }),
       });
 
@@ -68,12 +77,14 @@ export function ContactForm({ id }: { id?: string }) {
 
   return (
     <form id={id} onSubmit={onSubmit} noValidate className="flex flex-col gap-2.5">
-      {/* Honeypot — skryté pole pro roboty. */}
+      {/* Honeypot — skryté pole pro roboty. Nesmyslný název schválně:
+          pole jménem "website" nebo "url" umí vyplnit autofill prohlížeče
+          a legitimní poptávka by pak spadla do pasti. */}
       <label className="sr-only" aria-hidden>
         Nevyplňujte
         <input
           type="text"
-          name="website"
+          name="zprava_kontrola"
           tabIndex={-1}
           autoComplete="off"
           className="absolute h-0 w-0 opacity-0"

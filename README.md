@@ -76,16 +76,47 @@ jde přidávat nové realizace postupně, aniž by se rozbil layout.
 Formulář posílá `POST /api/poptavka`. Odesílání běží přes [Resend](https://resend.com)
 přímo přes REST API, takže projekt nepotřebuje žádnou další závislost.
 
+Poptávky chodí na **tomasimlauf@tis-cr.eu** (`inquiry.email` v `src/lib/site.ts`,
+přebít lze proměnnou `POPTAVKA_TO`). Veřejný kontaktní e-mail na webu zůstává
+`info@tis-cr.eu` — jsou to schválně dvě různé adresy.
+
 Nastav ve Vercelu (a lokálně v `.env.local`) proměnné z [`.env.example`](.env.example):
 
 ```
 RESEND_API_KEY=...
-POPTAVKA_FROM=web@tis-cr.eu     # musí být ověřená doména v Resendu
-POPTAVKA_TO=info@tis-cr.eu
+POPTAVKA_FROM=web@tis-construction.cz   # musí být ověřená doména v Resendu
+POPTAVKA_TO=tomasimlauf@tis-cr.eu
 ```
 
 **Dokud proměnné nejsou nastavené, formulář uživateli vrátí hlášku s e-mailovým
 kontaktem** místo tichého selhání.
+
+### Ochrana proti spamu
+
+Vrstvy se vyhodnocují v tomto pořadí; žádná nevyžaduje externí službu.
+
+| # | Vrstva | Co dělá |
+| --- | --- | --- |
+| 1 | Kontrola originu | Požadavek musí přijít z vlastní domény, ne z cizí stránky nebo skriptu → `403` |
+| 2 | Strop požadavků | 20 požadavků / 10 min na IP → `429`. Volný schválně, aby oprava překlepu nikoho nezablokovala |
+| 3 | Honeypot | Skryté pole `zprava_kontrola`. Název je neutrální schválně — pole jménem `website` umí vyplnit autofill prohlížeče |
+| 4 | Časová past | Odeslání dřív než 2,5 s po zobrazení formuláře |
+| 5 | Validace kontaktu | Musí jít o e-mail nebo telefon o 9–15 číslicích → `400` |
+| 6 | Strukturální heuristiky | Skóre za odkazy, BBCode/HTML odkazy, převahu nelatinkového písma, extrémně dlouhá slova |
+| 7 | Strop odeslání | 3 zprávy / 10 min a 12 / den na IP → `429` |
+
+Vrstvy 3, 4 a 6 vracejí **`200 OK`, ale zprávu zahodí** — robot se nemá dozvědět,
+že ho past odhalila. Každý záchyt se loguje do konzole Vercelu, takže jde ověřit,
+jestli filtr nechytá i legitimní poptávky.
+
+Dvě věci k vědomí:
+
+- Limity se drží **v paměti instance**. Na Vercelu to znamená, že při rozjetí na
+  víc instancí se počítají zvlášť. Pro provoz tohoto webu to stačí; při skutečném
+  útoku je potřeba sdílený stav (Upstash Redis) nebo WAF.
+- Proti cílenému spamu heuristiky nestačí. Dalším krokem je
+  [Cloudflare Turnstile](https://developers.cloudflare.com/turnstile/) — je zdarma,
+  bez klikacích hádanek, a napojí se jako osmá vrstva ve stejném route handleru.
 
 ## Analytika
 
