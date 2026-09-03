@@ -11,7 +11,7 @@ export default function HomePage() {
     <>
       {/* HERO — průmyslový režim */}
       <section data-tone="dark" className="bg-bg">
-        <div className="mx-auto grid w-full max-w-[1280px] lg:grid-cols-[1.05fr_.95fr]">
+        <div className="mx-auto grid w-full max-w-[1280px] lg:grid-cols-[.86fr_1.14fr]">
           <div className="px-5 py-14 md:px-12 md:py-16">
             <p className="eyebrow text-accent-quiet">
               {contact.city} · od {site.founded}
@@ -38,7 +38,7 @@ export default function HomePage() {
             src="/photos/hero-montaz-dopravniku.webp"
             alt="Jeřáb usazuje obloukový dopravníkový most na ocelové podpěry"
             ratio="hero-photo"
-            sizes="(max-width: 1024px) 100vw, 48vw"
+            sizes="(max-width: 1024px) 100vw, 58vw"
             priority
             blend
           />
