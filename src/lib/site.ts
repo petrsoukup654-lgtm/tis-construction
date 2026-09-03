@@ -91,7 +91,7 @@ export const desktopNav: NavItem[] = nav.filter(
 );
 
 export const stats = [
-  { value: "25+", label: "let na trhu" },
+  { value: "25+", label: "zkušeností" },
   { value: "2", label: "divize" },
   { value: "40+", label: "realizací od 2015" },
   { value: "ČR", label: "celá republika" },
