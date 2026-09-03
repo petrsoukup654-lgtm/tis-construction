@@ -1,26 +1,180 @@
 @import "tailwindcss";
 
+/*
+  TIS – CR s.r.o. — design systém v1
+  Barvy, typografie a pravidla odpovídají "TIS Design System.dc.html".
+
+  Světlá varianta je výchozí režim webu. Tmavá varianta je "průmyslový režim"
+  a nasazuje se po sekcích (hero, strojní divize, footer) přes data-tone="dark".
+*/
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* --- Světlá varianta --- */
+  --c-bg: #f5f6f7;
+  --c-surface: #ffffff;
+  --c-border: #d8dce1;
+  --c-hairline: #edeff1;
+  --c-ink: #15202f;
+  /*
+    Design systém uvádí ocelovou #717984, ta ale dává na světlém pozadí jen
+    4,07:1 — pod WCAG AA. Pro text používáme o stupeň tmavší odstín (4,9:1),
+    vizuálně prakticky totožný. Původní ocelová zůstává pro nadpisové linky.
+  */
+  --c-muted: #646c77;
+  --c-body: #646c77;
+  --c-steel: #717984;
+  --c-accent: #0a4a87;
+  --c-accent-hover: #073a6c;
+  --c-accent-quiet: #0a4a87;
+  --c-on-accent: #ffffff;
+  --c-outline: #15202f;
+  --c-placeholder: #e6e8eb;
+  --c-placeholder-alt: #dfe2e6;
+}
+
+[data-tone="dark"] {
+  /* --- Tmavá varianta — akcent zesvětlený kvůli kontrastu ≥ 4.5:1 na #091627 --- */
+  --c-bg: #091627;
+  --c-surface: #0f2033;
+  --c-border: #21354a;
+  --c-hairline: #21354a;
+  --c-ink: #f1f3f5;
+  --c-muted: #8a94a0;
+  --c-body: #a9b3be;
+  --c-accent: #2b6db5;
+  --c-accent-hover: #245e9e;
+  --c-accent-quiet: #7fb2e8;
+  --c-on-accent: #ffffff;
+  --c-outline: #8a94a0;
+  --c-placeholder: #0c1b2c;
+  --c-placeholder-alt: #0f2134;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg: var(--c-bg);
+  --color-surface: var(--c-surface);
+  --color-border: var(--c-border);
+  --color-hairline: var(--c-hairline);
+  --color-ink: var(--c-ink);
+  --color-muted: var(--c-muted);
+  --color-body: var(--c-body);
+  --color-accent: var(--c-accent);
+  --color-accent-hover: var(--c-accent-hover);
+  --color-accent-quiet: var(--c-accent-quiet);
+  --color-on-accent: var(--c-on-accent);
+  --color-outline: var(--c-outline);
+
+  --font-display: var(--font-barlow-condensed), "Barlow Semi Condensed", system-ui, sans-serif;
+  --font-sans: var(--font-barlow), Barlow, system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), "IBM Plex Mono", ui-monospace, monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--c-bg);
+    color: var(--c-ink);
+    font-family: var(--font-sans);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Pravidlo 01 — radius 0 px, hrany jsou ostré stejně jako v logu. */
+  *,
+  *::before,
+  *::after {
+    border-radius: 0;
+  }
+
+  ::selection {
+    background: var(--c-accent);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--c-accent);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* Pravidlo 04 — nadpisy vždy verzálkami a condensed. Běžný text nikdy verzálkami. */
+  .h-hero {
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    line-height: 1.02;
+    text-wrap: balance;
+  }
+
+  .h-section {
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.015em;
+    line-height: 1.05;
+  }
+
+  .h-card {
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+  }
+
+  /* Eyebrow, čísla a technické popisky — IBM Plex Mono */
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-weight: 500;
+    font-size: 0.719rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .label-mono {
+    font-family: var(--font-mono);
+    font-size: 0.656rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .btn-label {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  .prose-body {
+    color: var(--c-body);
+    text-wrap: pretty;
+  }
+
+  /* Šrafovaný zástupný blok za fotografii (podle wireframu). */
+  .photo-placeholder {
+    background-image: repeating-linear-gradient(
+      135deg,
+      var(--c-placeholder) 0 10px,
+      var(--c-placeholder-alt) 10px 20px
+    );
+  }
 }

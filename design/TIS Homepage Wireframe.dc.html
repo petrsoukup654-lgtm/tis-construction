@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics><meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#E4E7EA;font-family:Barlow,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#0A4A87;text-decoration:none}a:hover{color:#073A6C}
+.dv-turn{padding:44px 48px 36px;border-bottom:1px solid rgba(0,0,0,.09);scroll-margin-top:16px}
+.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 22px}
+.dv-tid{font:600 10px 'IBM Plex Mono',monospace;padding:3px 7px;background:#15202F;color:#fff;text-decoration:none}
+.dv-tname{font:600 13px/1.2 Barlow,sans-serif;color:#15202F;letter-spacing:.02em}
+.dv-opts{display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start}
+.dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}
+.dv-oid{font:600 10.5px 'IBM Plex Mono',monospace;padding:3px 7px;background:rgba(0,0,0,.09);color:#15202F;text-decoration:none}
+.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 11.5px/1.3 Barlow,sans-serif;color:rgba(0,0,0,.55)}
+.dv-card{max-width:100%;border:1px solid rgba(0,0,0,.12);overflow:hidden}
+.dv-opt:target .dv-oid{background:#0A4A87;color:#fff}
+.dv-next{margin:24px 0 0;font:12.5px/1.5 Barlow,sans-serif;color:rgba(0,0,0,.5)}
+</style></helmet>
+
+<section class="dv-turn" id="t2">
+<div class="dv-thd"><a class="dv-tid" href="#t2">2</a><span class="dv-tname">Podstránky oborů + mobilní verze (tmavá varianta)</span></div>
+<div class="dv-opts">
+
+<!-- ===================== 2a STROJNÍ ===================== -->
+<div class="dv-opt" id="2a">
+  <div class="dv-olabel"><a class="dv-oid" href="#2a">2a</a>Podstránka — Strojní činnosti</div>
+  <div class="dv-card" style="width:1180px;background:#091627;border-color:#21354A" data-screen-label="Strojní činnosti">
+
+    <div style="background:#0F2033;border-bottom:1px solid #21354A;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:84px">
+      <img src="assets/tis-logo-dark.png" alt="TIS Construction" style="height:52px;display:block">
+      <div style="display:flex;align-items:center;gap:30px">
+        <div style="display:flex;gap:26px;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15.5px;letter-spacing:.09em;text-transform:uppercase">
+          <span style="color:#8A94A0">Úvod</span>
+          <span style="color:#F1F3F5;border-bottom:2px solid #2B6DB5;padding-bottom:3px">Strojní činnosti</span>
+          <span style="color:#8A94A0">Stavební činnosti</span>
+          <span style="color:#8A94A0">O nás</span>
+          <span style="color:#8A94A0">Kontakt</span>
+        </div>
+        <div style="background:#2B6DB5;color:#fff;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14.5px;letter-spacing:.09em;text-transform:uppercase;padding:12px 20px">Poptávka</div>
+      </div>
+    </div>
+
+    <div style="padding:16px 40px;border-bottom:1px solid #21354A;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8A94A0">Úvod &nbsp;/&nbsp; <span style="color:#7FB2E8">Strojní činnosti</span></div>
+
+    <div style="display:grid;grid-template-columns:1fr .85fr">
+      <div style="padding:60px 40px 56px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#7FB2E8;margin-bottom:18px">Divize 01</div>
+        <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:58px;line-height:1.02;text-transform:uppercase;letter-spacing:.01em;color:#fff">Strojní činnosti</div>
+        <div style="font-size:17.5px;line-height:1.6;color:#A9B3BE;max-width:470px;margin-top:20px;text-wrap:pretty">Tradiční český dodavatel dopravních systémů pro přepravu sypkých materiálů. Zajišťujeme kompletní dodávku technologického celku — projekt, výrobu, montáž i následný servis.</div>
+        <div style="display:flex;gap:12px;margin-top:30px">
+          <div style="background:#2B6DB5;color:#fff;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.09em;text-transform:uppercase;padding:14px 26px">Poptat strojní řešení</div>
+          <div style="border:1.5px solid #8A94A0;color:#fff;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.09em;text-transform:uppercase;padding:12.5px 26px">Stáhnout referenční list</div>
+        </div>
+      </div>
+      <div style="border-left:1px solid #21354A;display:flex;align-items:center;justify-content:center;min-height:340px;background-image:repeating-linear-gradient(135deg,#0C1B2C 0 10px,#0F2134 10px 20px)">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.14em;color:#8A94A0;text-align:center;line-height:1.9">FOTO — DÁLKOVÁ PÁSOVÁ DOPRAVA<br><span style="opacity:.65">1400 × 1000</span></div>
+      </div>
+    </div>
+
+    <div style="background:#0F2033;border-top:1px solid #21354A;border-bottom:1px solid #21354A;padding:20px 40px;display:flex;gap:0;flex-wrap:wrap">
+      <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.09em;text-transform:uppercase;color:#F1F3F5;padding:8px 18px 8px 0;border-right:1px solid #21354A;margin-right:18px">Rozsah služeb</div>
+      <div style="display:flex;gap:22px;align-items:center;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8A94A0;padding:8px 0">
+        <span style="color:#7FB2E8">Projekce</span><span>Výroba</span><span>Montáž</span><span>Servis</span><span>Náhradní díly</span>
+      </div>
+    </div>
+
+    <div style="padding:64px 40px 0">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#7FB2E8">01 — Co dodáváme</div>
+      <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:40px;line-height:1.05;text-transform:uppercase;letter-spacing:.015em;color:#F1F3F5;margin-top:10px">Přehled činností</div>
+    </div>
+
+    <div style="padding:30px 40px 68px;display:grid;grid-template-columns:1fr 1fr;gap:20px">
+      <div style="background:#0F2033;border:1px solid #21354A;border-top:3px solid #2B6DB5;padding:26px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;color:#7FB2E8">01</div>
+        <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:24px;text-transform:uppercase;letter-spacing:.02em;color:#F1F3F5;margin-top:8px;line-height:1.1">Inženýrská, projekční a konstrukční činnost</div>
+        <div style="font-size:15px;line-height:1.6;color:#8A94A0;margin-top:10px">Návrh technologie, výrobní dokumentace, statické posouzení a inženýring vedoucí k předání díla.</div>
+      </div>
+      <div style="background:#0F2033;border:1px solid #21354A;border-top:3px solid #2B6DB5;padding:26px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;color:#7FB2E8">02</div>
+        <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:24px;text-transform:uppercase;letter-spacing:.02em;color:#F1F3F5;margin-top:8px;line-height:1.1">Výroba a montáž ocelových konstrukcí</div>
+        <div style="font-size:15px;line-height:1.6;color:#8A94A0;margin-top:10px">Vlastní výroba svařovaných konstrukcí včetně povrchové úpravy, dopravy na stavbu a montáže.</div>
+      </div>
+      <div style="background:#0F2033;border:1px solid #21354A;border-top:3px solid #2B6DB5;padding:26px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;color:#7FB2E8">03</div>
+        <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:24px;text-transform:uppercase;letter-spacing:.02em;color:#F1F3F5;margin-top:8px;line-height:1.1">Dálková pásová doprava</div>
+        <div style="font-size:15px;line-height:1.6;color:#8A94A0;margin-top:10px">Pásové dopravníky, přesypy a zauhlovací trasy pro přepravu sypkých materiálů na dlouhé vzdálenosti.</div>
+      </div>
+      <div style="background:#0F2033;border:1px solid #21354A;border-top:3px solid #2B6DB5;padding:26px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;color:#7FB2E8">04</div>
+        <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:24px;text-transform:uppercase;letter-spacing:.02em;color:#F1F3F5;margin-top:8px;line-height:1.1">Technologická doprava a náhradní díly</div>
+        <div style="font-size:15px;line-height:1.6;color:#8A94A0;margin-top:10px">Skladovací a dávkovací zařízení, redlery, šnekové dopravníky a dodávky náhradních dílů.</div>
+      </div>
+    </div>
+
+    <div style="background:#0F2033;border-top:1px solid #21354A;border-bottom:1px solid #21354A;padding:64px 40px;display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#7FB2E8">02 — Jak pracujeme</div>
+        <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:36px;line-height:1.06;text-transform:uppercase;letter-spacing:.015em;color:#F1F3F5;margin-top:10px">Od poptávky<br>po předání</div>
+        <div style="font-size:16px;line-height:1.65;color:#8A94A0;margin-top:14px;text-wrap:pretty">Jeden dodavatel za celou zakázku — nemusíte koordinovat projektanta, výrobu a montážní firmu zvlášť.</div>
+      </div>
+      <div style="display:flex;flex-direction:column">
+        <div style="display:grid;grid-template-columns:56px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid #21354A"><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:30px;color:#2B6DB5;line-height:1">01</div><div><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:20px;text-transform:uppercase;letter-spacing:.03em;color:#F1F3F5">Poptávka a konzultace</div><div style="font-size:14.5px;line-height:1.6;color:#8A94A0;margin-top:3px">Prohlídka provozu, technické zadání, orientační rozpočet.</div></div></div>
+        <div style="display:grid;grid-template-columns:56px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid #21354A"><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:30px;color:#2B6DB5;line-height:1">02</div><div><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:20px;text-transform:uppercase;letter-spacing:.03em;color:#F1F3F5">Projekt a dokumentace</div><div style="font-size:14.5px;line-height:1.6;color:#8A94A0;margin-top:3px">Konstrukční návrh, statika, výrobní výkresy.</div></div></div>
+        <div style="display:grid;grid-template-columns:56px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid #21354A"><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:30px;color:#2B6DB5;line-height:1">03</div><div><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:20px;text-transform:uppercase;letter-spacing:.03em;color:#F1F3F5">Výroba</div><div style="font-size:14.5px;line-height:1.6;color:#8A94A0;margin-top:3px">Svařování, obrábění, povrchová úprava, kontrola kvality.</div></div></div>
+        <div style="display:grid;grid-template-columns:56px 1fr;gap:20px;padding:18px 0"><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:30px;color:#2B6DB5;line-height:1">04</div><div><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:20px;text-transform:uppercase;letter-spacing:.03em;color:#F1F3F5">Montáž, zkoušky, servis</div><div style="font-size:14.5px;line-height:1.6;color:#8A94A0;margin-top:3px">Montáž na místě, uvedení do provozu a záruční i pozáruční servis.</div></div></div>
+      </div>
+    </div>
+
+    <div style="background:#F5F6F7;padding:60px 40px">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:24px">
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#0A4A87">03 — Realizace</div>
+          <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:34px;text-transform:uppercase;letter-spacing:.015em;color:#15202F;margin-top:8px">Strojní zakázky</div>
+        </div>
+        <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.09em;text-transform:uppercase;color:#0A4A87">Všechny realizace →</div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+        <div><div style="height:150px;background-image:repeating-linear-gradient(135deg,#E6E8EB 0 10px,#DFE2E6 10px 20px);border:1px solid #D8DCE1;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:#717984">FOTO 4:3</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:#717984;margin-top:11px">2020 · SUŠÁRNA</div><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:19px;text-transform:uppercase;color:#15202F;line-height:1.15;margin-top:3px">Sušárna zrnin Kocbeře</div></div>
+        <div><div style="height:150px;background-image:repeating-linear-gradient(135deg,#E6E8EB 0 10px,#DFE2E6 10px 20px);border:1px solid #D8DCE1;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:#717984">FOTO 4:3</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:#717984;margin-top:11px">2018 · DOPRAVNÍKY</div><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:19px;text-transform:uppercase;color:#15202F;line-height:1.15;margin-top:3px">Zauhlovací trasa teplárny</div></div>
+        <div><div style="height:150px;background-image:repeating-linear-gradient(135deg,#E6E8EB 0 10px,#DFE2E6 10px 20px);border:1px solid #D8DCE1;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:#717984">FOTO 4:3</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:#717984;margin-top:11px">2021 · OK</div><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:19px;text-transform:uppercase;color:#15202F;line-height:1.15;margin-top:3px">Ocelová konstrukce zásobníku</div></div>
+      </div>
+    </div>
+
+    <div style="padding:56px 40px;display:flex;align-items:center;justify-content:space-between;gap:40px;border-bottom:1px solid #21354A">
+      <div>
+        <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:34px;text-transform:uppercase;letter-spacing:.02em;color:#F1F3F5;line-height:1.08">Potřebujete dopravní systém na míru?</div>
+        <div style="font-size:16px;line-height:1.6;color:#8A94A0;margin-top:8px">Pošlete zadání — do dvou pracovních dnů se ozveme s návrhem řešení.</div>
+      </div>
+      <div style="display:flex;gap:12px;flex:none">
+        <div style="background:#2B6DB5;color:#fff;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.09em;text-transform:uppercase;padding:14px 26px">Nezávazná poptávka</div>
+        <div style="border:1.5px solid #8A94A0;color:#fff;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.09em;text-transform:uppercase;padding:12.5px 26px">+420 000 000 000</div>
+      </div>
+    </div>
+
+    <div style="background:#0F2033;padding:44px 40px;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px">
+      <div>
+        <img src="assets/tis-logo-dark.png" alt="TIS Construction" style="height:46px;display:block">
+        <div style="font-size:14.5px;line-height:1.7;color:#8A94A0;margin-top:16px">Štěpánkova 142, 537 01 Chrudim<br>IČ 25260103 · DIČ CZ25260103</div>
+      </div>
+      <div style="font-size:14.5px;line-height:2;color:#A9B3BE"><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#7FB2E8;margin-bottom:8px">Služby</div>Strojní činnosti<br>Stavební činnosti</div>
+      <div style="font-size:14.5px;line-height:2;color:#A9B3BE"><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#7FB2E8;margin-bottom:8px">Kontakt</div>info@tis-cr.eu<br>+420 000 000 000</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== 2b STAVEBNÍ ===================== -->
+<div class="dv-opt" id="2b">
+  <div class="dv-olabel"><a class="dv-oid" href="#2b">2b</a>Podstránka — Stavební činnosti</div>
+  <div class="dv-card" style="width:1180px;background:#091627;border-color:#21354A" data-screen-label="Stavební činnosti">
+
+    <div style="background:#0F2033;border-bottom:1px solid #21354A;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:84px">
+      <img src="assets/tis-logo-dark.png" alt="TIS Construction" style="height:52px;display:block">
+      <div style="display:flex;align-items:center;gap:30px">
+        <div style="display:flex;gap:26px;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15.5px;letter-spacing:.09em;text-transform:uppercase">
+          <span style="color:#8A94A0">Úvod</span>
+          <span style="color:#8A94A0">Strojní činnosti</span>
+          <span style="color:#F1F3F5;border-bottom:2px solid #2B6DB5;padding-bottom:3px">Stavební činnosti</span>
+          <span style="color:#8A94A0">O nás</span>
+          <span style="color:#8A94A0">Kontakt</span>
+        </div>
+        <div style="background:#2B6DB5;color:#fff;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14.5px;letter-spacing:.09em;text-transform:uppercase;padding:12px 20px">Poptávka</div>
+      </div>
+    </div>
+
+    <div style="padding:16px 40px;border-bottom:1px solid #21354A;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8A94A0">Úvod &nbsp;/&nbsp; <span style="color:#7FB2E8">Stavební činnosti</span></div>
+
+    <div style="display:grid;grid-template-columns:1fr .85fr">
+      <div style="padding:60px 40px 56px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#7FB2E8;margin-bottom:18px">Divize 02</div>
+        <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:58px;line-height:1.02;text-transform:uppercase;letter-spacing:.01em;color:#fff">Stavební činnosti</div>
+        <div style="font-size:17.5px;line-height:1.6;color:#A9B3BE;max-width:470px;margin-top:20px;text-wrap:pretty">Kompletní stavební práce včetně všech profesí — při nové výstavbě i rekonstrukcích. Od průmyslových a zemědělských celků až po rodinné domy.</div>
+        <div style="display:flex;gap:12px;margin-top:30px">
+          <div style="background:#2B6DB5;color:#fff;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.09em;text-transform:uppercase;padding:14px 26px">Poptat stavbu</div>
+          <div style="border:1.5px solid #8A94A0;color:#fff;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.09em;text-transform:uppercase;padding:12.5px 26px">Prohlédnout realizace</div>
+        </div>
+      </div>
+      <div style="border-left:1px solid #21354A;display:flex;align-items:center;justify-content:center;min-height:340px;background-image:repeating-linear-gradient(135deg,#0C1B2C 0 10px,#0F2134 10px 20px)">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.14em;color:#8A94A0;text-align:center;line-height:1.9">FOTO — STAVBA HALY<br><span style="opacity:.65">1400 × 1000</span></div>
+      </div>
+    </div>
+
+    <div style="background:#0F2033;border-top:1px solid #21354A;border-bottom:1px solid #21354A;padding:20px 40px;display:flex;gap:0;flex-wrap:wrap">
+      <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.09em;text-transform:uppercase;color:#F1F3F5;padding:8px 18px 8px 0;border-right:1px solid #21354A;margin-right:18px">Rozsah služeb</div>
+      <div style="display:flex;gap:22px;align-items:center;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8A94A0;padding:8px 0">
+        <span style="color:#7FB2E8">Generální dodávka</span><span>Hrubá stavba</span><span>Profese</span><span>Rekonstrukce</span><span>Dokončovací práce</span>
+      </div>
+    </div>
+
+    <div style="padding:64px 40px 0">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#7FB2E8">01 — Co stavíme</div>
+      <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:40px;line-height:1.05;text-transform:uppercase;letter-spacing:.015em;color:#F1F3F5;margin-top:10px">Typy staveb</div>
+    </div>
+
+    <div style="padding:30px 40px 68px;display:grid;grid-template-columns:1fr 1fr;gap:20px">
+      <div style="background:#0F2033;border:1px solid #21354A;border-top:3px solid #2B6DB5;padding:26px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;color:#7FB2E8">01</div>
+        <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:24px;text-transform:uppercase;letter-spacing:.02em;color:#F1F3F5;margin-top:8px;line-height:1.1">Průmyslové stavby</div>
+        <div style="font-size:15px;line-height:1.6;color:#8A94A0;margin-top:10px">Výrobní a skladové haly, přístavby provozů, základy pod technologie a zpevněné plochy.</div>
+      </div>
+      <div style="background:#0F2033;border:1px solid #21354A;border-top:3px solid #2B6DB5;padding:26px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;color:#7FB2E8">02</div>
+        <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:24px;text-transform:uppercase;letter-spacing:.02em;color:#F1F3F5;margin-top:8px;line-height:1.1">Zemědělské stavby</div>
+        <div style="font-size:15px;line-height:1.6;color:#8A94A0;margin-top:10px">Seníky, sklady zrnin, stáje a přípravné plochy — často v návaznosti na naši strojní divizi.</div>
+      </div>
+      <div style="background:#0F2033;border:1px solid #21354A;border-top:3px solid #2B6DB5;padding:26px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;color:#7FB2E8">03</div>
+        <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:24px;text-transform:uppercase;letter-spacing:.02em;color:#F1F3F5;margin-top:8px;line-height:1.1">Stavby občanské vybavenosti</div>
+        <div style="font-size:15px;line-height:1.6;color:#8A94A0;margin-top:10px">Objekty pro obce a firmy — administrativa, ubytování, rekonstrukce veřejných budov.</div>
+      </div>
+      <div style="background:#0F2033;border:1px solid #21354A;border-top:3px solid #2B6DB5;padding:26px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;color:#7FB2E8">04</div>
+        <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:24px;text-transform:uppercase;letter-spacing:.02em;color:#F1F3F5;margin-top:8px;line-height:1.1">Rodinné domy a rekonstrukce</div>
+        <div style="font-size:15px;line-height:1.6;color:#8A94A0;margin-top:10px">Novostavby na klíč i celkové rekonstrukce včetně všech řemesel a dokončovacích prací.</div>
+      </div>
+    </div>
+
+    <div style="background:#0F2033;border-top:1px solid #21354A;border-bottom:1px solid #21354A;padding:64px 40px;display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#7FB2E8">02 — Průběh stavby</div>
+        <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:36px;line-height:1.06;text-transform:uppercase;letter-spacing:.015em;color:#F1F3F5;margin-top:10px">Jedna smlouva,<br>jedna odpovědnost</div>
+        <div style="font-size:16px;line-height:1.65;color:#8A94A0;margin-top:14px;text-wrap:pretty">Zajišťujeme i profese — elektro, ZTI, topení, podlahy. Investor komunikuje s jedním stavbyvedoucím.</div>
+      </div>
+      <div style="display:flex;flex-direction:column">
+        <div style="display:grid;grid-template-columns:56px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid #21354A"><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:30px;color:#2B6DB5;line-height:1">01</div><div><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:20px;text-transform:uppercase;letter-spacing:.03em;color:#F1F3F5">Prohlídka a rozpočet</div><div style="font-size:14.5px;line-height:1.6;color:#8A94A0;margin-top:3px">Návštěva pozemku, položkový rozpočet, termínový plán.</div></div></div>
+        <div style="display:grid;grid-template-columns:56px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid #21354A"><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:30px;color:#2B6DB5;line-height:1">02</div><div><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:20px;text-transform:uppercase;letter-spacing:.03em;color:#F1F3F5">Příprava a povolení</div><div style="font-size:14.5px;line-height:1.6;color:#8A94A0;margin-top:3px">Projektová dokumentace a inženýring při povolování stavby.</div></div></div>
+        <div style="display:grid;grid-template-columns:56px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid #21354A"><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:30px;color:#2B6DB5;line-height:1">03</div><div><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:20px;text-transform:uppercase;letter-spacing:.03em;color:#F1F3F5">Realizace</div><div style="font-size:14.5px;line-height:1.6;color:#8A94A0;margin-top:3px">Hrubá stavba, profese, dokončovací práce — vlastní stavbyvedoucí.</div></div></div>
+        <div style="display:grid;grid-template-columns:56px 1fr;gap:20px;padding:18px 0"><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:30px;color:#2B6DB5;line-height:1">04</div><div><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:20px;text-transform:uppercase;letter-spacing:.03em;color:#F1F3F5">Předání a záruka</div><div style="font-size:14.5px;line-height:1.6;color:#8A94A0;margin-top:3px">Kolaudace, předání dokumentace, záruční servis.</div></div></div>
+      </div>
+    </div>
+
+    <div style="background:#F5F6F7;padding:60px 40px">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:24px">
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#0A4A87">03 — Realizace</div>
+          <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:34px;text-transform:uppercase;letter-spacing:.015em;color:#15202F;margin-top:8px">Stavební zakázky</div>
+        </div>
+        <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.09em;text-transform:uppercase;color:#0A4A87">Všechny realizace →</div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+        <div><div style="height:150px;background-image:repeating-linear-gradient(135deg,#E6E8EB 0 10px,#DFE2E6 10px 20px);border:1px solid #D8DCE1;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:#717984">FOTO 4:3</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:#717984;margin-top:11px">2022 · REKONSTRUKCE</div><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:19px;text-transform:uppercase;color:#15202F;line-height:1.15;margin-top:3px">Rekonstrukce hotelu Kraskov</div></div>
+        <div><div style="height:150px;background-image:repeating-linear-gradient(135deg,#E6E8EB 0 10px,#DFE2E6 10px 20px);border:1px solid #D8DCE1;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:#717984">FOTO 4:3</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:#717984;margin-top:11px">2019 · HALA</div><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:19px;text-transform:uppercase;color:#15202F;line-height:1.15;margin-top:3px">Ocelová hala Havlíčkův Brod</div></div>
+        <div><div style="height:150px;background-image:repeating-linear-gradient(135deg,#E6E8EB 0 10px,#DFE2E6 10px 20px);border:1px solid #D8DCE1;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:#717984">FOTO 4:3</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:#717984;margin-top:11px">2023 · RD</div><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:19px;text-transform:uppercase;color:#15202F;line-height:1.15;margin-top:3px">Rodinný dům Chrudim</div></div>
+      </div>
+    </div>
+
+    <div style="padding:56px 40px;display:flex;align-items:center;justify-content:space-between;gap:40px;border-bottom:1px solid #21354A">
+      <div>
+        <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:34px;text-transform:uppercase;letter-spacing:.02em;color:#F1F3F5;line-height:1.08">Plánujete stavbu nebo rekonstrukci?</div>
+        <div style="font-size:16px;line-height:1.6;color:#8A94A0;margin-top:8px">Přijedeme se podívat a připravíme položkový rozpočet zdarma.</div>
+      </div>
+      <div style="display:flex;gap:12px;flex:none">
+        <div style="background:#2B6DB5;color:#fff;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.09em;text-transform:uppercase;padding:14px 26px">Nezávazná poptávka</div>
+        <div style="border:1.5px solid #8A94A0;color:#fff;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.09em;text-transform:uppercase;padding:12.5px 26px">+420 000 000 000</div>
+      </div>
+    </div>
+
+    <div style="background:#0F2033;padding:44px 40px;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px">
+      <div>
+        <img src="assets/tis-logo-dark.png" alt="TIS Construction" style="height:46px;display:block">
+        <div style="font-size:14.5px;line-height:1.7;color:#8A94A0;margin-top:16px">Štěpánkova 142, 537 01 Chrudim<br>IČ 25260103 · DIČ CZ25260103</div>
+      </div>
+      <div style="font-size:14.5px;line-height:2;color:#A9B3BE"><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#7FB2E8;margin-bottom:8px">Služby</div>Strojní činnosti<br>Stavební činnosti</div>
+      <div style="font-size:14.5px;line-height:2;color:#A9B3BE"><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#7FB2E8;margin-bottom:8px">Kontakt</div>info@tis-cr.eu<br>+420 000 000 000</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== 2c MOBIL ===================== -->
+<div class="dv-opt" id="2c">
+  <div class="dv-olabel"><a class="dv-oid" href="#2c">2c</a>Mobilní verze — homepage, otevřené menu, podstránka oboru (390 px)</div>
+  <div style="display:flex;gap:24px;align-items:flex-start">
+
+    <!-- MOBILE HOME -->
+    <div class="dv-card" style="width:390px;background:#091627;border-color:#21354A" data-screen-label="Mobil — homepage">
+      <div style="background:#0F2033;border-bottom:1px solid #21354A;display:flex;align-items:center;justify-content:space-between;padding:0 20px;height:64px">
+        <img src="assets/tis-logo-dark.png" alt="TIS Construction" style="height:36px;display:block">
+        <div style="display:flex;flex-direction:column;gap:5px;width:26px;padding:12px 0">
+          <div style="height:2px;background:#F1F3F5"></div><div style="height:2px;background:#F1F3F5"></div><div style="height:2px;background:#F1F3F5"></div>
+        </div>
+      </div>
+      <div style="padding:36px 20px 34px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#7FB2E8;margin-bottom:14px">Chrudim · od 1997</div>
+        <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:40px;line-height:1.02;text-transform:uppercase;color:#fff">Strojní<br>a stavební<br>realizace</div>
+        <div style="font-size:16px;line-height:1.6;color:#A9B3BE;margin-top:16px;text-wrap:pretty">Dopravní systémy pro sypké materiály, ocelové konstrukce a kompletní stavební práce.</div>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:24px">
+          <div style="background:#2B6DB5;color:#fff;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:16px;letter-spacing:.09em;text-transform:uppercase;padding:16px;text-align:center">Nezávazná poptávka</div>
+          <div style="border:1.5px solid #8A94A0;color:#fff;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:16px;letter-spacing:.09em;text-transform:uppercase;padding:14.5px;text-align:center">Zavolat</div>
+        </div>
+      </div>
+      <div style="height:200px;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;color:#8A94A0;background-image:repeating-linear-gradient(135deg,#0C1B2C 0 10px,#0F2134 10px 20px);border-top:1px solid #21354A;border-bottom:1px solid #21354A">FOTO — PÁSOVÝ DOPRAVNÍK</div>
+      <div style="background:#0F2033;border-bottom:1px solid #21354A;display:grid;grid-template-columns:1fr 1fr">
+        <div style="padding:18px 20px;border-right:1px solid #21354A;border-bottom:1px solid #21354A"><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:30px;color:#7FB2E8;line-height:1">25+</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#8A94A0;margin-top:3px">let na trhu</div></div>
+        <div style="padding:18px 20px;border-bottom:1px solid #21354A"><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:30px;color:#7FB2E8;line-height:1">40+</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#8A94A0;margin-top:3px">realizací</div></div>
+        <div style="padding:18px 20px;border-right:1px solid #21354A"><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:30px;color:#7FB2E8;line-height:1">2</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#8A94A0;margin-top:3px">divize</div></div>
+        <div style="padding:18px 20px"><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:30px;color:#7FB2E8;line-height:1">ČR</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#8A94A0;margin-top:3px">působnost</div></div>
+      </div>
+      <div style="padding:40px 20px 12px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#7FB2E8">Co děláme</div>
+        <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:30px;line-height:1.05;text-transform:uppercase;color:#F1F3F5;margin-top:8px">Dvě divize,<br>jeden dodavatel</div>
+      </div>
+      <div style="padding:18px 20px 40px;display:flex;flex-direction:column;gap:16px">
+        <div style="background:#0F2033;border:1px solid #21354A;border-top:3px solid #2B6DB5">
+          <div style="height:130px;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:#8A94A0;background-image:repeating-linear-gradient(135deg,#0C1B2C 0 10px,#122439 10px 20px);border-bottom:1px solid #21354A">FOTO — OCELOVÁ KONSTRUKCE</div>
+          <div style="padding:20px">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#7FB2E8">Divize 01</div>
+            <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:26px;text-transform:uppercase;color:#F1F3F5;margin-top:6px;line-height:1.08">Strojní činnosti</div>
+            <div style="font-size:15px;line-height:1.6;color:#8A94A0;margin-top:8px">Dopravní systémy pro sypké materiály, ocelové konstrukce, dálková pásová doprava.</div>
+            <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.09em;text-transform:uppercase;color:#7FB2E8;border-bottom:2px solid #2B6DB5;display:inline-block;padding-bottom:2px;margin-top:16px">Detail divize →</div>
+          </div>
+        </div>
+        <div style="background:#0F2033;border:1px solid #21354A;border-top:3px solid #2B6DB5">
+          <div style="height:130px;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:#8A94A0;background-image:repeating-linear-gradient(135deg,#0C1B2C 0 10px,#122439 10px 20px);border-bottom:1px solid #21354A">FOTO — STAVBA / HALA</div>
+          <div style="padding:20px">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#7FB2E8">Divize 02</div>
+            <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:26px;text-transform:uppercase;color:#F1F3F5;margin-top:6px;line-height:1.08">Stavební činnosti</div>
+            <div style="font-size:15px;line-height:1.6;color:#8A94A0;margin-top:8px">Kompletní stavební práce včetně profesí — od průmyslových celků po rodinné domy.</div>
+            <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.09em;text-transform:uppercase;color:#7FB2E8;border-bottom:2px solid #2B6DB5;display:inline-block;padding-bottom:2px;margin-top:16px">Detail divize →</div>
+          </div>
+        </div>
+      </div>
+      <div style="background:#F5F6F7;padding:36px 20px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#0A4A87">Vybrané realizace</div>
+        <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:30px;text-transform:uppercase;color:#15202F;margin-top:6px">Reference</div>
+        <div style="display:flex;flex-direction:column;gap:18px;margin-top:20px">
+          <div><div style="height:150px;background-image:repeating-linear-gradient(135deg,#E6E8EB 0 10px,#DFE2E6 10px 20px);border:1px solid #D8DCE1;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:#717984">FOTO 4:3</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;color:#717984;margin-top:9px">2022 · STAVEBNÍ</div><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:19px;text-transform:uppercase;color:#15202F;line-height:1.15;margin-top:2px">Rekonstrukce hotelu Kraskov</div></div>
+          <div><div style="height:150px;background-image:repeating-linear-gradient(135deg,#E6E8EB 0 10px,#DFE2E6 10px 20px);border:1px solid #D8DCE1;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:#717984">FOTO 4:3</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;color:#717984;margin-top:9px">2020 · STROJNÍ</div><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:19px;text-transform:uppercase;color:#15202F;line-height:1.15;margin-top:2px">Sušárna zrnin Kocbeře</div></div>
+        </div>
+        <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.09em;text-transform:uppercase;color:#0A4A87;border-bottom:2px solid #0A4A87;display:inline-block;padding-bottom:2px;margin-top:20px">Všechny realizace →</div>
+      </div>
+      <div style="padding:36px 20px">
+        <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:28px;text-transform:uppercase;color:#F1F3F5;line-height:1.08">Máte poptávku?</div>
+        <div style="font-size:15.5px;line-height:1.6;color:#8A94A0;margin-top:8px">Do dvou pracovních dnů se vám vrátíme s návrhem řešení.</div>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:20px">
+          <div style="background:#0F2033;border:1px solid #21354A;border-left:3px solid #2B6DB5;padding:14px;font-size:15px;color:#8A94A0">Jméno a firma</div>
+          <div style="background:#0F2033;border:1px solid #21354A;border-left:3px solid #2B6DB5;padding:14px;font-size:15px;color:#8A94A0">E-mail nebo telefon</div>
+          <div style="background:#0F2033;border:1px solid #21354A;border-left:3px solid #2B6DB5;padding:14px;font-size:15px;color:#8A94A0;height:64px">Krátký popis zakázky</div>
+          <div style="background:#2B6DB5;color:#fff;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:16px;letter-spacing:.09em;text-transform:uppercase;padding:16px;text-align:center">Odeslat poptávku</div>
+        </div>
+      </div>
+      <div style="background:#0F2033;border-top:1px solid #21354A;padding:28px 20px">
+        <img src="assets/tis-logo-dark.png" alt="TIS Construction" style="height:38px;display:block">
+        <div style="font-size:14.5px;line-height:1.7;color:#8A94A0;margin-top:14px">Štěpánkova 142, 537 01 Chrudim<br>info@tis-cr.eu · +420 000 000 000</div>
+      </div>
+      <div style="background:#0F2033;border-top:1px solid #21354A;display:grid;grid-template-columns:1fr 1fr;position:sticky;bottom:0">
+        <div style="background:#2B6DB5;color:#fff;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.09em;text-transform:uppercase;padding:16px;text-align:center">Zavolat</div>
+        <div style="color:#F1F3F5;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.09em;text-transform:uppercase;padding:16px;text-align:center">Napsat e-mail</div>
+      </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div class="dv-card" style="width:390px;background:#091627;border-color:#21354A;align-self:flex-start" data-screen-label="Mobil — menu">
+      <div style="background:#0F2033;border-bottom:1px solid #21354A;display:flex;align-items:center;justify-content:space-between;padding:0 20px;height:64px">
+        <img src="assets/tis-logo-dark.png" alt="TIS Construction" style="height:36px;display:block">
+        <div style="width:26px;height:26px;position:relative">
+          <div style="position:absolute;top:12px;left:0;width:26px;height:2px;background:#F1F3F5;transform:rotate(45deg)"></div>
+          <div style="position:absolute;top:12px;left:0;width:26px;height:2px;background:#F1F3F5;transform:rotate(-45deg)"></div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column">
+        <div style="padding:20px;border-bottom:1px solid #21354A;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:24px;letter-spacing:.05em;text-transform:uppercase;color:#8A94A0">Úvod</div>
+        <div style="padding:20px;border-bottom:1px solid #21354A;border-left:3px solid #2B6DB5;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:24px;letter-spacing:.05em;text-transform:uppercase;color:#F1F3F5">Strojní činnosti</div>
+        <div style="padding:20px;border-bottom:1px solid #21354A;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:24px;letter-spacing:.05em;text-transform:uppercase;color:#8A94A0">Stavební činnosti</div>
+        <div style="padding:20px;border-bottom:1px solid #21354A;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:24px;letter-spacing:.05em;text-transform:uppercase;color:#8A94A0">Reference</div>
+        <div style="padding:20px;border-bottom:1px solid #21354A;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:24px;letter-spacing:.05em;text-transform:uppercase;color:#8A94A0">O nás</div>
+        <div style="padding:20px;border-bottom:1px solid #21354A;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:24px;letter-spacing:.05em;text-transform:uppercase;color:#8A94A0">Kontakt</div>
+      </div>
+      <div style="padding:24px 20px">
+        <div style="background:#2B6DB5;color:#fff;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:16px;letter-spacing:.09em;text-transform:uppercase;padding:16px;text-align:center">Nezávazná poptávka</div>
+        <div style="font-size:14.5px;line-height:1.8;color:#8A94A0;margin-top:20px;font-family:'IBM Plex Mono',monospace;letter-spacing:.04em">info@tis-cr.eu<br>+420 000 000 000<br>Štěpánkova 142, Chrudim</div>
+      </div>
+    </div>
+
+    <!-- MOBILE SUBPAGE -->
+    <div class="dv-card" style="width:390px;background:#091627;border-color:#21354A" data-screen-label="Mobil — Strojní činnosti">
+      <div style="background:#0F2033;border-bottom:1px solid #21354A;display:flex;align-items:center;justify-content:space-between;padding:0 20px;height:64px">
+        <img src="assets/tis-logo-dark.png" alt="TIS Construction" style="height:36px;display:block">
+        <div style="display:flex;flex-direction:column;gap:5px;width:26px;padding:12px 0">
+          <div style="height:2px;background:#F1F3F5"></div><div style="height:2px;background:#F1F3F5"></div><div style="height:2px;background:#F1F3F5"></div>
+        </div>
+      </div>
+      <div style="padding:14px 20px;border-bottom:1px solid #21354A;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8A94A0">Úvod &nbsp;/&nbsp; <span style="color:#7FB2E8">Strojní činnosti</span></div>
+      <div style="padding:32px 20px 30px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#7FB2E8;margin-bottom:12px">Divize 01</div>
+        <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:40px;line-height:1.02;text-transform:uppercase;color:#fff">Strojní<br>činnosti</div>
+        <div style="font-size:16px;line-height:1.6;color:#A9B3BE;margin-top:14px;text-wrap:pretty">Tradiční český dodavatel dopravních systémů pro přepravu sypkých materiálů. Projekt, výroba, montáž i servis od jednoho dodavatele.</div>
+        <div style="background:#2B6DB5;color:#fff;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:16px;letter-spacing:.09em;text-transform:uppercase;padding:16px;text-align:center;margin-top:22px">Poptat strojní řešení</div>
+      </div>
+      <div style="height:190px;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;color:#8A94A0;background-image:repeating-linear-gradient(135deg,#0C1B2C 0 10px,#0F2134 10px 20px);border-top:1px solid #21354A;border-bottom:1px solid #21354A">FOTO — DÁLKOVÁ PÁSOVÁ DOPRAVA</div>
+      <div style="padding:36px 20px 12px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#7FB2E8">01 — Co dodáváme</div>
+        <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:30px;text-transform:uppercase;color:#F1F3F5;margin-top:6px">Přehled činností</div>
+      </div>
+      <div style="padding:16px 20px 36px;display:flex;flex-direction:column;gap:14px">
+        <div style="background:#0F2033;border:1px solid #21354A;border-top:3px solid #2B6DB5;padding:20px"><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.16em;color:#7FB2E8">01</div><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:22px;text-transform:uppercase;color:#F1F3F5;margin-top:6px;line-height:1.1">Inženýrská a projekční činnost</div><div style="font-size:14.5px;line-height:1.6;color:#8A94A0;margin-top:8px">Návrh technologie, výrobní dokumentace, statika, inženýring.</div></div>
+        <div style="background:#0F2033;border:1px solid #21354A;border-top:3px solid #2B6DB5;padding:20px"><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.16em;color:#7FB2E8">02</div><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:22px;text-transform:uppercase;color:#F1F3F5;margin-top:6px;line-height:1.1">Ocelové konstrukce</div><div style="font-size:14.5px;line-height:1.6;color:#8A94A0;margin-top:8px">Vlastní výroba, povrchová úprava, doprava a montáž.</div></div>
+        <div style="background:#0F2033;border:1px solid #21354A;border-top:3px solid #2B6DB5;padding:20px"><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.16em;color:#7FB2E8">03</div><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:22px;text-transform:uppercase;color:#F1F3F5;margin-top:6px;line-height:1.1">Dálková pásová doprava</div><div style="font-size:14.5px;line-height:1.6;color:#8A94A0;margin-top:8px">Dopravníky, přesypy a zauhlovací trasy pro sypké materiály.</div></div>
+        <div style="background:#0F2033;border:1px solid #21354A;border-top:3px solid #2B6DB5;padding:20px"><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.16em;color:#7FB2E8">04</div><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:22px;text-transform:uppercase;color:#F1F3F5;margin-top:6px;line-height:1.1">Technologie a náhradní díly</div><div style="font-size:14.5px;line-height:1.6;color:#8A94A0;margin-top:8px">Skladovací a dávkovací zařízení, redlery, šnekové dopravníky.</div></div>
+      </div>
+      <div style="background:#0F2033;border-top:1px solid #21354A;border-bottom:1px solid #21354A;padding:32px 20px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#7FB2E8">02 — Jak pracujeme</div>
+        <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:30px;text-transform:uppercase;color:#F1F3F5;margin-top:6px;line-height:1.06">Od poptávky<br>po předání</div>
+        <div style="display:flex;flex-direction:column;margin-top:16px">
+          <div style="display:grid;grid-template-columns:44px 1fr;gap:14px;padding:14px 0;border-bottom:1px solid #21354A"><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:24px;color:#2B6DB5;line-height:1">01</div><div><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:18px;text-transform:uppercase;letter-spacing:.03em;color:#F1F3F5">Poptávka a konzultace</div><div style="font-size:14px;line-height:1.55;color:#8A94A0;margin-top:2px">Prohlídka provozu, zadání, orientační rozpočet.</div></div></div>
+          <div style="display:grid;grid-template-columns:44px 1fr;gap:14px;padding:14px 0;border-bottom:1px solid #21354A"><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:24px;color:#2B6DB5;line-height:1">02</div><div><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:18px;text-transform:uppercase;letter-spacing:.03em;color:#F1F3F5">Projekt a dokumentace</div><div style="font-size:14px;line-height:1.55;color:#8A94A0;margin-top:2px">Konstrukční návrh, statika, výrobní výkresy.</div></div></div>
+          <div style="display:grid;grid-template-columns:44px 1fr;gap:14px;padding:14px 0;border-bottom:1px solid #21354A"><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:24px;color:#2B6DB5;line-height:1">03</div><div><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:18px;text-transform:uppercase;letter-spacing:.03em;color:#F1F3F5">Výroba</div><div style="font-size:14px;line-height:1.55;color:#8A94A0;margin-top:2px">Svařování, obrábění, povrchová úprava, kontrola.</div></div></div>
+          <div style="display:grid;grid-template-columns:44px 1fr;gap:14px;padding:14px 0"><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:24px;color:#2B6DB5;line-height:1">04</div><div><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:18px;text-transform:uppercase;letter-spacing:.03em;color:#F1F3F5">Montáž a servis</div><div style="font-size:14px;line-height:1.55;color:#8A94A0;margin-top:2px">Uvedení do provozu, záruční i pozáruční servis.</div></div></div>
+        </div>
+      </div>
+      <div style="background:#F5F6F7;padding:32px 20px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#0A4A87">03 — Realizace</div>
+        <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:30px;text-transform:uppercase;color:#15202F;margin-top:6px">Strojní zakázky</div>
+        <div style="display:flex;gap:14px;margin-top:18px;overflow:hidden">
+          <div style="flex:none;width:220px"><div style="height:150px;background-image:repeating-linear-gradient(135deg,#E6E8EB 0 10px,#DFE2E6 10px 20px);border:1px solid #D8DCE1;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:#717984">FOTO 4:3</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;color:#717984;margin-top:9px">2020 · SUŠÁRNA</div><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:18px;text-transform:uppercase;color:#15202F;line-height:1.15;margin-top:2px">Sušárna zrnin Kocbeře</div></div>
+          <div style="flex:none;width:220px"><div style="height:150px;background-image:repeating-linear-gradient(135deg,#E6E8EB 0 10px,#DFE2E6 10px 20px);border:1px solid #D8DCE1;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:#717984">FOTO 4:3</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;color:#717984;margin-top:9px">2018 · DOPRAVNÍKY</div><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:18px;text-transform:uppercase;color:#15202F;line-height:1.15;margin-top:2px">Zauhlovací trasa teplárny</div></div>
+        </div>
+        <div style="display:flex;gap:6px;margin-top:16px"><div style="width:28px;height:3px;background:#0A4A87"></div><div style="width:28px;height:3px;background:#D8DCE1"></div><div style="width:28px;height:3px;background:#D8DCE1"></div></div>
+      </div>
+      <div style="padding:34px 20px">
+        <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:28px;text-transform:uppercase;color:#F1F3F5;line-height:1.08">Potřebujete dopravní systém na míru?</div>
+        <div style="font-size:15.5px;line-height:1.6;color:#8A94A0;margin-top:8px">Pošlete zadání — ozveme se do dvou pracovních dnů.</div>
+        <div style="background:#2B6DB5;color:#fff;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:16px;letter-spacing:.09em;text-transform:uppercase;padding:16px;text-align:center;margin-top:18px">Nezávazná poptávka</div>
+      </div>
+      <div style="background:#0F2033;border-top:1px solid #21354A;padding:28px 20px">
+        <img src="assets/tis-logo-dark.png" alt="TIS Construction" style="height:38px;display:block">
+        <div style="font-size:14.5px;line-height:1.7;color:#8A94A0;margin-top:14px">Štěpánkova 142, 537 01 Chrudim<br>info@tis-cr.eu · +420 000 000 000</div>
+      </div>
+      <div style="background:#0F2033;border-top:1px solid #21354A;display:grid;grid-template-columns:1fr 1fr;position:sticky;bottom:0">
+        <div style="background:#2B6DB5;color:#fff;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.09em;text-transform:uppercase;padding:16px;text-align:center">Zavolat</div>
+        <div style="color:#F1F3F5;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.09em;text-transform:uppercase;padding:16px;text-align:center">Napsat e-mail</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</div>
+<p class="dv-next">Zkuste dál: „přidej stránku Reference s filtrem" · „udělej stránku Kontakt s mapou" · „v <a class="dv-oid" href="#2a">2a</a> přidej technické parametry / tabulku"</p>
+</section>
+
+<section class="dv-turn" id="t1">
+<div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Homepage — dvě varianty design systému</span></div>
+<div class="dv-opts">
+
+<!-- ===================== 1a LIGHT ===================== -->
+<div class="dv-opt" id="1a">
+  <div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>Světlá varianta — bílý základ, modré akcenty, tmavý hero pás</div>
+  <div class="dv-card" style="width:1180px;background:#F5F6F7">
+
+    <div style="background:#fff;border-bottom:1px solid #D8DCE1;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:84px">
+      <img src="assets/tis-logo.gif" alt="TIS Construction" style="height:52px;display:block">
+      <div style="display:flex;align-items:center;gap:30px">
+        <div style="display:flex;gap:26px;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15.5px;letter-spacing:.09em;text-transform:uppercase">
+          <span style="color:#15202F;border-bottom:2px solid #0A4A87;padding-bottom:3px">Úvod</span>
+          <span style="color:#717984">Strojní činnosti</span>
+          <span style="color:#717984">Stavební činnosti</span>
+          <span style="color:#717984">O nás</span>
+          <span style="color:#717984">Kontakt</span>
+        </div>
+        <div style="background:#0A4A87;color:#fff;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14.5px;letter-spacing:.09em;text-transform:uppercase;padding:12px 20px">Poptávka</div>
+      </div>
+    </div>
+
+    <div style="background:#091627;padding:0;display:grid;grid-template-columns:1.05fr .95fr">
+      <div style="padding:64px 40px 60px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#7FB2E8;margin-bottom:20px">Chrudim · od 1997</div>
+        <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:62px;line-height:1.02;text-transform:uppercase;letter-spacing:.01em;color:#fff;text-wrap:balance">Strojní<br>a stavební<br>realizace</div>
+        <div style="font-size:17.5px;line-height:1.6;color:#A9B3BE;max-width:420px;margin-top:22px;text-wrap:pretty">Dopravní systémy pro sypké materiály, ocelové konstrukce a kompletní stavební práce. Od projektu po předání.</div>
+        <div style="display:flex;gap:12px;margin-top:32px">
+          <div style="background:#2B6DB5;color:#fff;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.09em;text-transform:uppercase;padding:14px 26px">Nezávazná poptávka</div>
+          <div style="border:1.5px solid #8A94A0;color:#fff;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.09em;text-transform:uppercase;padding:12.5px 26px">Naše realizace</div>
+        </div>
+      </div>
+      <div style="background:#0C1B2C;border-left:1px solid #21354A;display:flex;align-items:center;justify-content:center;min-height:360px;background-image:repeating-linear-gradient(135deg,#0C1B2C 0 10px,#0F2134 10px 20px)">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.14em;color:#8A94A0;text-align:center;line-height:1.9">FOTO — PÁSOVÝ DOPRAVNÍK<br><span style="opacity:.65">1600 × 1100, full-bleed</span></div>
+      </div>
+    </div>
+
+    <div style="background:#fff;border-bottom:1px solid #D8DCE1;display:grid;grid-template-columns:repeat(4,1fr)">
+      <div style="padding:26px 40px;border-right:1px solid #EDEFF1"><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:38px;color:#0A4A87;line-height:1">25+</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#717984;margin-top:4px">let na trhu</div></div>
+      <div style="padding:26px 24px;border-right:1px solid #EDEFF1"><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:38px;color:#0A4A87;line-height:1">2</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#717984;margin-top:4px">divize</div></div>
+      <div style="padding:26px 24px;border-right:1px solid #EDEFF1"><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:38px;color:#0A4A87;line-height:1">40+</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#717984;margin-top:4px">realizací od 2015</div></div>
+      <div style="padding:26px 24px"><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:38px;color:#0A4A87;line-height:1">ČR</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#717984;margin-top:4px">celá republika</div></div>
+    </div>
+
+    <div style="padding:72px 40px 0">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#0A4A87">Co děláme</div>
+      <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:42px;line-height:1.05;text-transform:uppercase;letter-spacing:.015em;color:#15202F;margin-top:10px">Dvě divize, jeden dodavatel</div>
+    </div>
+
+    <div style="padding:34px 40px 72px;display:grid;grid-template-columns:1fr 1fr;gap:24px">
+      <div style="background:#fff;border:1px solid #D8DCE1;border-top:3px solid #0A4A87">
+        <div style="background:#E6E8EB;border-bottom:1px solid #D8DCE1;height:180px;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;color:#717984;background-image:repeating-linear-gradient(135deg,#E6E8EB 0 10px,#DFE2E6 10px 20px)">FOTO — OCELOVÁ KONSTRUKCE</div>
+        <div style="padding:28px 26px 30px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#0A4A87">Divize 01</div>
+          <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:30px;text-transform:uppercase;letter-spacing:.02em;color:#15202F;line-height:1.08;margin-top:8px">Strojní činnosti</div>
+          <div style="font-size:15.5px;line-height:1.6;color:#717984;margin-top:12px;text-wrap:pretty">Tradiční český dodavatel dopravních systémů pro přepravu sypkých materiálů. Komplexní dodávky technologických celků od projektu po realizaci.</div>
+          <div style="display:flex;flex-direction:column;gap:9px;margin-top:20px;padding-top:20px;border-top:1px solid #EDEFF1;font-size:15px;color:#15202F">
+            <div style="display:flex;gap:11px"><span style="color:#0A4A87">—</span>Inženýrská, projekční a konstrukční činnost</div>
+            <div style="display:flex;gap:11px"><span style="color:#0A4A87">—</span>Výroba a montáž ocelových konstrukcí</div>
+            <div style="display:flex;gap:11px"><span style="color:#0A4A87">—</span>Dálková pásová doprava</div>
+            <div style="display:flex;gap:11px"><span style="color:#0A4A87">—</span>Technologická doprava a náhradní díly</div>
+          </div>
+          <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.09em;text-transform:uppercase;color:#0A4A87;border-bottom:2px solid #0A4A87;display:inline-block;padding-bottom:2px;margin-top:24px">Detail divize →</div>
+        </div>
+      </div>
+
+      <div style="background:#fff;border:1px solid #D8DCE1;border-top:3px solid #0A4A87">
+        <div style="background:#E6E8EB;border-bottom:1px solid #D8DCE1;height:180px;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;color:#717984;background-image:repeating-linear-gradient(135deg,#E6E8EB 0 10px,#DFE2E6 10px 20px)">FOTO — STAVBA / HALA</div>
+        <div style="padding:28px 26px 30px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#0A4A87">Divize 02</div>
+          <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:30px;text-transform:uppercase;letter-spacing:.02em;color:#15202F;line-height:1.08;margin-top:8px">Stavební činnosti</div>
+          <div style="font-size:15.5px;line-height:1.6;color:#717984;margin-top:12px;text-wrap:pretty">Kompletní stavební práce včetně všech profesí při výstavbě i rekonstrukcích — od průmyslových celků až po rodinné domy.</div>
+          <div style="display:flex;flex-direction:column;gap:9px;margin-top:20px;padding-top:20px;border-top:1px solid #EDEFF1;font-size:15px;color:#15202F">
+            <div style="display:flex;gap:11px"><span style="color:#0A4A87">—</span>Průmyslové a zemědělské stavby</div>
+            <div style="display:flex;gap:11px"><span style="color:#0A4A87">—</span>Stavby občanské vybavenosti</div>
+            <div style="display:flex;gap:11px"><span style="color:#0A4A87">—</span>Rodinné domy a rekonstrukce</div>
+            <div style="display:flex;gap:11px"><span style="color:#0A4A87">—</span>Generální dodávky staveb</div>
+          </div>
+          <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.09em;text-transform:uppercase;color:#0A4A87;border-bottom:2px solid #0A4A87;display:inline-block;padding-bottom:2px;margin-top:24px">Detail divize →</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:#fff;border-top:1px solid #D8DCE1;border-bottom:1px solid #D8DCE1;padding:64px 40px">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:26px">
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#0A4A87">Vybrané realizace</div>
+          <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:36px;text-transform:uppercase;letter-spacing:.015em;color:#15202F;margin-top:8px">Reference</div>
+        </div>
+        <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.09em;text-transform:uppercase;color:#0A4A87">Všechny realizace →</div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+        <div><div style="height:150px;background-image:repeating-linear-gradient(135deg,#E6E8EB 0 10px,#DFE2E6 10px 20px);border:1px solid #D8DCE1;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:#717984">FOTO 4:3</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:#717984;margin-top:11px">2022 · STAVEBNÍ</div><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:19px;text-transform:uppercase;color:#15202F;line-height:1.15;margin-top:3px">Rekonstrukce hotelu Kraskov</div></div>
+        <div><div style="height:150px;background-image:repeating-linear-gradient(135deg,#E6E8EB 0 10px,#DFE2E6 10px 20px);border:1px solid #D8DCE1;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:#717984">FOTO 4:3</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:#717984;margin-top:11px">2019 · STAVEBNÍ</div><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:19px;text-transform:uppercase;color:#15202F;line-height:1.15;margin-top:3px">Ocelová hala Havlíčkův Brod</div></div>
+        <div><div style="height:150px;background-image:repeating-linear-gradient(135deg,#E6E8EB 0 10px,#DFE2E6 10px 20px);border:1px solid #D8DCE1;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:#717984">FOTO 4:3</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:#717984;margin-top:11px">2020 · STROJNÍ</div><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:19px;text-transform:uppercase;color:#15202F;line-height:1.15;margin-top:3px">Sušárna zrnin Kocbeře</div></div>
+      </div>
+    </div>
+
+    <div style="padding:68px 40px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#0A4A87">O firmě</div>
+        <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:36px;line-height:1.08;text-transform:uppercase;letter-spacing:.015em;color:#15202F;margin-top:10px">Zkušenost z průmyslu i ze stavby</div>
+        <div style="font-size:16.5px;line-height:1.65;color:#717984;margin-top:16px;text-wrap:pretty">Více než 25 let dodáváme systémy a ocelové konstrukce pro energetiku, stavebnictví, dřevozpracující i zemědělský průmysl. Vlastní projekce, výroba i montáž znamenají jednu odpovědnost za celou zakázku.</div>
+      </div>
+      <div style="background:#15202F;padding:34px 32px">
+        <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:28px;text-transform:uppercase;letter-spacing:.02em;color:#fff;line-height:1.1">Máte poptávku?</div>
+        <div style="font-size:15.5px;line-height:1.6;color:#A9B3BE;margin-top:10px">Ozvěte se — do dvou pracovních dnů se vám vrátíme s návrhem řešení.</div>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:24px">
+          <div style="background:#fff;border:1px solid #2C3A4C;padding:12px 14px;font-size:14.5px;color:#717984">Jméno a firma</div>
+          <div style="background:#fff;border:1px solid #2C3A4C;padding:12px 14px;font-size:14.5px;color:#717984">E-mail nebo telefon</div>
+          <div style="background:#fff;border:1px solid #2C3A4C;padding:12px 14px;font-size:14.5px;color:#717984;height:56px">Krátký popis zakázky</div>
+          <div style="background:#2B6DB5;color:#fff;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.09em;text-transform:uppercase;padding:14px 22px;text-align:center">Odeslat poptávku</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:#091627;padding:44px 40px;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px">
+      <div>
+        <img src="assets/tis-logo-dark.png" alt="TIS Construction" style="height:46px;display:block">
+        <div style="font-size:14.5px;line-height:1.7;color:#8A94A0;margin-top:16px">Štěpánkova 142, 537 01 Chrudim<br>IČ 25260103 · DIČ CZ25260103</div>
+      </div>
+      <div style="font-size:14.5px;line-height:2;color:#A9B3BE"><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#7FB2E8;margin-bottom:8px">Služby</div>Strojní činnosti<br>Stavební činnosti</div>
+      <div style="font-size:14.5px;line-height:2;color:#A9B3BE"><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#7FB2E8;margin-bottom:8px">Kontakt</div>info@tis-cr.eu<br>+420 000 000 000</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== 1b DARK ===================== -->
+<div class="dv-opt" id="1b">
+  <div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a>Tmavá varianta — průmyslový režim, světlé karty jen pro reference</div>
+  <div class="dv-card" style="width:1180px;background:#091627;border-color:#21354A">
+
+    <div style="background:#0F2033;border-bottom:1px solid #21354A;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:84px">
+      <img src="assets/tis-logo-dark.png" alt="TIS Construction" style="height:52px;display:block">
+      <div style="display:flex;align-items:center;gap:30px">
+        <div style="display:flex;gap:26px;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15.5px;letter-spacing:.09em;text-transform:uppercase">
+          <span style="color:#F1F3F5;border-bottom:2px solid #2B6DB5;padding-bottom:3px">Úvod</span>
+          <span style="color:#8A94A0">Strojní činnosti</span>
+          <span style="color:#8A94A0">Stavební činnosti</span>
+          <span style="color:#8A94A0">O nás</span>
+          <span style="color:#8A94A0">Kontakt</span>
+        </div>
+        <div style="background:#2B6DB5;color:#fff;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14.5px;letter-spacing:.09em;text-transform:uppercase;padding:12px 20px">Poptávka</div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1.05fr .95fr">
+      <div style="padding:64px 40px 60px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#7FB2E8;margin-bottom:20px">Chrudim · od 1997</div>
+        <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:62px;line-height:1.02;text-transform:uppercase;letter-spacing:.01em;color:#fff;text-wrap:balance">Strojní<br>a stavební<br>realizace</div>
+        <div style="font-size:17.5px;line-height:1.6;color:#A9B3BE;max-width:420px;margin-top:22px;text-wrap:pretty">Dopravní systémy pro sypké materiály, ocelové konstrukce a kompletní stavební práce. Od projektu po předání.</div>
+        <div style="display:flex;gap:12px;margin-top:32px">
+          <div style="background:#2B6DB5;color:#fff;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.09em;text-transform:uppercase;padding:14px 26px">Nezávazná poptávka</div>
+          <div style="border:1.5px solid #8A94A0;color:#fff;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.09em;text-transform:uppercase;padding:12.5px 26px">Naše realizace</div>
+        </div>
+      </div>
+      <div style="border-left:1px solid #21354A;display:flex;align-items:center;justify-content:center;min-height:360px;background-image:repeating-linear-gradient(135deg,#0C1B2C 0 10px,#0F2134 10px 20px)">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.14em;color:#8A94A0;text-align:center;line-height:1.9">FOTO — PÁSOVÝ DOPRAVNÍK<br><span style="opacity:.65">1600 × 1100, full-bleed</span></div>
+      </div>
+    </div>
+
+    <div style="background:#0F2033;border-top:1px solid #21354A;border-bottom:1px solid #21354A;display:grid;grid-template-columns:repeat(4,1fr)">
+      <div style="padding:26px 40px;border-right:1px solid #21354A"><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:38px;color:#7FB2E8;line-height:1">25+</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8A94A0;margin-top:4px">let na trhu</div></div>
+      <div style="padding:26px 24px;border-right:1px solid #21354A"><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:38px;color:#7FB2E8;line-height:1">2</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8A94A0;margin-top:4px">divize</div></div>
+      <div style="padding:26px 24px;border-right:1px solid #21354A"><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:38px;color:#7FB2E8;line-height:1">40+</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8A94A0;margin-top:4px">realizací od 2015</div></div>
+      <div style="padding:26px 24px"><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:38px;color:#7FB2E8;line-height:1">ČR</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8A94A0;margin-top:4px">celá republika</div></div>
+    </div>
+
+    <div style="padding:72px 40px 0">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#7FB2E8">Co děláme</div>
+      <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:42px;line-height:1.05;text-transform:uppercase;letter-spacing:.015em;color:#F1F3F5;margin-top:10px">Dvě divize, jeden dodavatel</div>
+    </div>
+
+    <div style="padding:34px 40px 72px;display:grid;grid-template-columns:1fr 1fr;gap:24px">
+      <div style="background:#0F2033;border:1px solid #21354A;border-top:3px solid #2B6DB5">
+        <div style="border-bottom:1px solid #21354A;height:180px;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;color:#8A94A0;background-image:repeating-linear-gradient(135deg,#0C1B2C 0 10px,#122439 10px 20px)">FOTO — OCELOVÁ KONSTRUKCE</div>
+        <div style="padding:28px 26px 30px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#7FB2E8">Divize 01</div>
+          <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:30px;text-transform:uppercase;letter-spacing:.02em;color:#F1F3F5;line-height:1.08;margin-top:8px">Strojní činnosti</div>
+          <div style="font-size:15.5px;line-height:1.6;color:#8A94A0;margin-top:12px;text-wrap:pretty">Tradiční český dodavatel dopravních systémů pro přepravu sypkých materiálů. Komplexní dodávky technologických celků od projektu po realizaci.</div>
+          <div style="display:flex;flex-direction:column;gap:9px;margin-top:20px;padding-top:20px;border-top:1px solid #21354A;font-size:15px;color:#D6DBE1">
+            <div style="display:flex;gap:11px"><span style="color:#2B6DB5">—</span>Inženýrská, projekční a konstrukční činnost</div>
+            <div style="display:flex;gap:11px"><span style="color:#2B6DB5">—</span>Výroba a montáž ocelových konstrukcí</div>
+            <div style="display:flex;gap:11px"><span style="color:#2B6DB5">—</span>Dálková pásová doprava</div>
+            <div style="display:flex;gap:11px"><span style="color:#2B6DB5">—</span>Technologická doprava a náhradní díly</div>
+          </div>
+          <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.09em;text-transform:uppercase;color:#7FB2E8;border-bottom:2px solid #2B6DB5;display:inline-block;padding-bottom:2px;margin-top:24px">Detail divize →</div>
+        </div>
+      </div>
+
+      <div style="background:#0F2033;border:1px solid #21354A;border-top:3px solid #2B6DB5">
+        <div style="border-bottom:1px solid #21354A;height:180px;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;color:#8A94A0;background-image:repeating-linear-gradient(135deg,#0C1B2C 0 10px,#122439 10px 20px)">FOTO — STAVBA / HALA</div>
+        <div style="padding:28px 26px 30px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#7FB2E8">Divize 02</div>
+          <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:30px;text-transform:uppercase;letter-spacing:.02em;color:#F1F3F5;line-height:1.08;margin-top:8px">Stavební činnosti</div>
+          <div style="font-size:15.5px;line-height:1.6;color:#8A94A0;margin-top:12px;text-wrap:pretty">Kompletní stavební práce včetně všech profesí při výstavbě i rekonstrukcích — od průmyslových celků až po rodinné domy.</div>
+          <div style="display:flex;flex-direction:column;gap:9px;margin-top:20px;padding-top:20px;border-top:1px solid #21354A;font-size:15px;color:#D6DBE1">
+            <div style="display:flex;gap:11px"><span style="color:#2B6DB5">—</span>Průmyslové a zemědělské stavby</div>
+            <div style="display:flex;gap:11px"><span style="color:#2B6DB5">—</span>Stavby občanské vybavenosti</div>
+            <div style="display:flex;gap:11px"><span style="color:#2B6DB5">—</span>Rodinné domy a rekonstrukce</div>
+            <div style="display:flex;gap:11px"><span style="color:#2B6DB5">—</span>Generální dodávky staveb</div>
+          </div>
+          <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.09em;text-transform:uppercase;color:#7FB2E8;border-bottom:2px solid #2B6DB5;display:inline-block;padding-bottom:2px;margin-top:24px">Detail divize →</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:#F5F6F7;padding:64px 40px">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:26px">
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#0A4A87">Vybrané realizace</div>
+          <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:36px;text-transform:uppercase;letter-spacing:.015em;color:#15202F;margin-top:8px">Reference</div>
+        </div>
+        <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.09em;text-transform:uppercase;color:#0A4A87">Všechny realizace →</div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+        <div><div style="height:150px;background-image:repeating-linear-gradient(135deg,#E6E8EB 0 10px,#DFE2E6 10px 20px);border:1px solid #D8DCE1;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:#717984">FOTO 4:3</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:#717984;margin-top:11px">2022 · STAVEBNÍ</div><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:19px;text-transform:uppercase;color:#15202F;line-height:1.15;margin-top:3px">Rekonstrukce hotelu Kraskov</div></div>
+        <div><div style="height:150px;background-image:repeating-linear-gradient(135deg,#E6E8EB 0 10px,#DFE2E6 10px 20px);border:1px solid #D8DCE1;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:#717984">FOTO 4:3</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:#717984;margin-top:11px">2019 · STAVEBNÍ</div><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:19px;text-transform:uppercase;color:#15202F;line-height:1.15;margin-top:3px">Ocelová hala Havlíčkův Brod</div></div>
+        <div><div style="height:150px;background-image:repeating-linear-gradient(135deg,#E6E8EB 0 10px,#DFE2E6 10px 20px);border:1px solid #D8DCE1;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:#717984">FOTO 4:3</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:#717984;margin-top:11px">2020 · STROJNÍ</div><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:19px;text-transform:uppercase;color:#15202F;line-height:1.15;margin-top:3px">Sušárna zrnin Kocbeře</div></div>
+      </div>
+    </div>
+
+    <div style="padding:68px 40px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#7FB2E8">O firmě</div>
+        <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:36px;line-height:1.08;text-transform:uppercase;letter-spacing:.015em;color:#F1F3F5;margin-top:10px">Zkušenost z průmyslu i ze stavby</div>
+        <div style="font-size:16.5px;line-height:1.65;color:#8A94A0;margin-top:16px;text-wrap:pretty">Více než 25 let dodáváme systémy a ocelové konstrukce pro energetiku, stavebnictví, dřevozpracující i zemědělský průmysl. Vlastní projekce, výroba i montáž znamenají jednu odpovědnost za celou zakázku.</div>
+      </div>
+      <div style="background:#0F2033;border:1px solid #21354A;padding:34px 32px">
+        <div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:28px;text-transform:uppercase;letter-spacing:.02em;color:#F1F3F5;line-height:1.1">Máte poptávku?</div>
+        <div style="font-size:15.5px;line-height:1.6;color:#8A94A0;margin-top:10px">Ozvěte se — do dvou pracovních dnů se vám vrátíme s návrhem řešení.</div>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:24px">
+          <div style="background:#091627;border:1px solid #21354A;border-left:3px solid #2B6DB5;padding:12px 14px;font-size:14.5px;color:#8A94A0">Jméno a firma</div>
+          <div style="background:#091627;border:1px solid #21354A;border-left:3px solid #2B6DB5;padding:12px 14px;font-size:14.5px;color:#8A94A0">E-mail nebo telefon</div>
+          <div style="background:#091627;border:1px solid #21354A;border-left:3px solid #2B6DB5;padding:12px 14px;font-size:14.5px;color:#8A94A0;height:56px">Krátký popis zakázky</div>
+          <div style="background:#2B6DB5;color:#fff;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.09em;text-transform:uppercase;padding:14px 22px;text-align:center">Odeslat poptávku</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:#0F2033;border-top:1px solid #21354A;padding:44px 40px;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px">
+      <div>
+        <img src="assets/tis-logo-dark.png" alt="TIS Construction" style="height:46px;display:block">
+        <div style="font-size:14.5px;line-height:1.7;color:#8A94A0;margin-top:16px">Štěpánkova 142, 537 01 Chrudim<br>IČ 25260103 · DIČ CZ25260103</div>
+      </div>
+      <div style="font-size:14.5px;line-height:2;color:#A9B3BE"><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#7FB2E8;margin-bottom:8px">Služby</div>Strojní činnosti<br>Stavební činnosti</div>
+      <div style="font-size:14.5px;line-height:2;color:#A9B3BE"><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#7FB2E8;margin-bottom:8px">Kontakt</div>info@tis-cr.eu<br>+420 000 000 000</div>
+    </div>
+  </div>
+</div>
+
+</div>
+<p class="dv-next">Zkuste dál: „pokračuj s <a class="dv-oid" href="#1a">1a</a> a udělej podstránku Strojní činnosti" · „v <a class="dv-oid" href="#1b">1b</a> zkrať hero a přidej pás oborů" · „ukaž mobilní verzi"</p>
+</section>
+</x-dc>
+</body>
+</html>
