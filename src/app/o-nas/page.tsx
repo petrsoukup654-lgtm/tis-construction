@@ -52,16 +52,11 @@ export default function ONasPage() {
               Od {site.founded} působíme po celé České republice se sídlem
               v {contact.city}i.
             </p>
-            <ul className="mt-6 flex flex-col gap-3 border-t border-border pt-6">
+            <ul className="list-square mt-6 flex flex-col gap-3 border-t border-border pt-6">
               {divisions.map((division) => (
-                <li key={division.slug} className="flex gap-3 text-[0.96875rem]">
-                  <span aria-hidden className="text-accent">
-                    —
-                  </span>
-                  <span>
-                    <strong className="font-semibold">{division.title}</strong>{" "}
-                    <span className="text-body">{division.summary}</span>
-                  </span>
+                <li key={division.slug} className="text-[0.96875rem]">
+                  <strong className="font-semibold">{division.title}</strong>{" "}
+                  <span className="text-body">{division.summary}</span>
                 </li>
               ))}
             </ul>
