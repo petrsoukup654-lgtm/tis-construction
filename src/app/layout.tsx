@@ -43,9 +43,8 @@ export const metadata: Metadata = {
     description: site.description,
     url: site.url,
   },
-  icons: {
-    icon: "/brand/tis-logo.gif",
-  },
+  // Ikony neuvádíme ručně — Next je odvodí ze souborů icon.svg, favicon.ico
+  // a apple-icon.png vedle tohoto layoutu. Generuje je scripts/make-favicon.py.
 };
 
 const organizationSchema = {

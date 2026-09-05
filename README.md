@@ -71,6 +71,21 @@ v `public/photos/` a vykresluje je komponenta `Photo`.
 `Photo` bez `src` spadne zpět na šrafovaný zástupný blok z wireframu — díky tomu
 jde přidávat nové realizace postupně, aniž by se rozbil layout.
 
+## Favicon
+
+Ikona je zjednodušená značka z loga — ozubené kolo se siluetou staveb, bílá
+a ocelová na firemní navy. Detaily z loga (perspektivní zkosení budov, kolo
+otevřené vpravo) se v 16 px slijí, proto je kresba záměrně střídmější.
+
+Generuje ji [`scripts/make-favicon.py`](scripts/make-favicon.py) do
+`src/app/icon.svg`, `favicon.ico` (16–256 px) a `apple-icon.png`. SVG i rastr
+vznikají ze stejných čísel, takže se nemůžou rozejít. Next si soubory zapojí
+sám přes konvenci App Routeru — v `metadata` se ikony neuvádějí.
+
+```bash
+python scripts/make-favicon.py
+```
+
 ## Poptávkový formulář
 
 Formulář posílá `POST /api/poptavka`. Odesílání běží přes [Resend](https://resend.com)
