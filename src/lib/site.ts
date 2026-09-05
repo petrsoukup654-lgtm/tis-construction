@@ -22,13 +22,18 @@ export const contact = {
   email: "info@tis-cr.eu",
   phone: "+420 739 065 563",
   phoneHref: "tel:+420739065563",
-  street: "Štěpánkova 142",
+  street: "K Májovu 1309",
+  /** Městská část — patří do zobrazené adresy, ne do addressLocality. */
+  district: "Chrudim IV",
   postalCode: "537 01",
   city: "Chrudim",
   ico: "05613566",
   /** Doplnit, až bude potvrzené plátcovství DPH. */
   dic: null as string | null,
 } as const;
+
+/** Adresa v jednom řádku — ať se tvar nerozchází mezi patičkou a kontaktem. */
+export const addressLine = `${contact.street}, ${contact.district}, ${contact.postalCode}`;
 
 /**
  * Kam chodí poptávky z formuláře. Záměrně oddělené od veřejného

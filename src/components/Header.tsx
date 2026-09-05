@@ -144,7 +144,7 @@ export function Header() {
                 {contact.phone}
               </a>
               <br />
-              {contact.street}, {contact.city}
+              {contact.street}, {contact.district}
             </address>
           </div>
         </div>

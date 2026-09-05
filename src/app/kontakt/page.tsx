@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { contact, people, site, telHref } from "@/lib/site";
+import { addressLine, contact, people, site, telHref } from "@/lib/site";
 import { Container } from "@/components/ui/Container";
 import { Breadcrumbs } from "@/components/Blocks";
 import { ContactForm } from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Kontakt",
-  description: `${site.name}, ${contact.street}, ${contact.postalCode} ${contact.city}. Napište nám na ${contact.email} nebo pošlete nezávaznou poptávku.`,
+  description: `${site.name}, ${addressLine}. Napište nám na ${contact.email} nebo pošlete nezávaznou poptávku.`,
 };
 
 export default function KontaktPage() {
@@ -38,7 +38,7 @@ export default function KontaktPage() {
                   <br />
                   {contact.street}
                   <br />
-                  {contact.postalCode} {contact.city}
+                  {contact.district}, {contact.postalCode}
                 </dd>
               </div>
               <div>

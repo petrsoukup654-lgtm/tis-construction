@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { contact, divisions, site } from "@/lib/site";
+import { addressLine, contact, divisions, site } from "@/lib/site";
 import { Container } from "@/components/ui/Container";
 
 export function Footer() {
@@ -17,7 +17,7 @@ export function Footer() {
               className="h-[46px] w-auto"
             />
             <address className="mt-4 text-[0.90625rem] not-italic leading-[1.7] text-muted">
-              {contact.street}, {contact.postalCode} {contact.city}
+              {addressLine}
               <br />
               IČ {contact.ico}
               {contact.dic ? ` · DIČ ${contact.dic}` : ""}
