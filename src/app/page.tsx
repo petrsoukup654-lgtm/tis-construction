@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { about, contact, divisions, references, site } from "@/lib/site";
+import { about, contact, divisions, featuredReferences, site } from "@/lib/site";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Photo, SectionHeading } from "@/components/ui/Section";
@@ -108,7 +108,7 @@ export default function HomePage() {
             }
             className="mb-7"
           />
-          <ReferenceGrid references={references.slice(0, 3)} />
+          <ReferenceGrid references={featuredReferences} />
         </Container>
       </section>
 

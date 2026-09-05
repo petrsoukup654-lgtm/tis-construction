@@ -450,6 +450,27 @@ export const references: Reference[] = [
   },
 ];
 
+/**
+ * Realizace vybrané na homepage — dvě strojní a jedna stavební.
+ *
+ * Vybíráme jmenovitě podle slugů, ne prvních N z pole: pořadí v `references`
+ * se řídí kategoriemi, takže `slice` by ukázal tři stavební. Vybrané kusy
+ * navíc schválně nepoužívají fotky, které homepage má jinde (hero a karty
+ * divizí), aby se na jedné stránce neopakovaly.
+ */
+const featuredSlugs = [
+  "dalkova-pasova-doprava",
+  "technologicka-doprava",
+  "rekonstrukce-hotelu-kraskov",
+] as const;
+
+export const featuredReferences: Reference[] = featuredSlugs.map((slug) => {
+  const found = references.find((reference) => reference.slug === slug);
+  // Překlep ve slugu má shodit build, ne tiše zmizet z homepage.
+  if (!found) throw new Error(`Neznámá realizace na homepage: ${slug}`);
+  return found;
+});
+
 export const about = {
   eyebrow: "O firmě",
   title: "Zkušenost z průmyslu i ze stavby",
