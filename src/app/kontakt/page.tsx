@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { addressLine, contact, inquiry, people, site, telHref } from "@/lib/site";
+import { addressLine, contact, people, site, telHref } from "@/lib/site";
 import { Container } from "@/components/ui/Container";
 import { Breadcrumbs } from "@/components/Blocks";
 import { ContactForm } from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Kontakt",
-  description: `${site.name}, ${addressLine}. Napište nám na ${inquiry.email} nebo pošlete nezávaznou poptávku.`,
+  description: `${site.name}, ${addressLine}. Napište nám na ${contact.email} nebo pošlete nezávaznou poptávku.`,
 };
 
 export default function KontaktPage() {
@@ -45,10 +45,10 @@ export default function KontaktPage() {
                 <dt className="label-mono text-muted">E-mail</dt>
                 <dd className="mt-1 text-[1rem]">
                   <a
-                    href={`mailto:${inquiry.email}`}
+                    href={`mailto:${contact.email}`}
                     className="text-accent hover:underline"
                   >
-                    {inquiry.email}
+                    {contact.email}
                   </a>
                 </dd>
               </div>

@@ -92,8 +92,9 @@ Formulář posílá `POST /api/poptavka`. Odesílání běží přes [Resend](ht
 přímo přes REST API, takže projekt nepotřebuje žádnou další závislost.
 
 Poptávky chodí na **tomasimlauf@tis-cr.eu** (`inquiry.email` v `src/lib/site.ts`,
-přebít lze proměnnou `POPTAVKA_TO`). Veřejný kontaktní e-mail na webu zůstává
-`info@tis-cr.eu` — jsou to schválně dvě různé adresy.
+přebít lze proměnnou `POPTAVKA_TO`). Stejná adresa je teď i veřejným kontaktem
+na webu; konstanty zůstávají dvě, aby šlo adresáta poptávek oddělit, až firma
+zavede sběrnou adresu.
 
 Nastav ve Vercelu (a lokálně v `.env.local`) proměnné z [`.env.example`](.env.example):
 
@@ -142,7 +143,7 @@ v nastavení projektu na Vercelu.
 ## Co ještě chybí
 
 - [ ] Ověřit DIČ — IČ je `05613566`, plátcovství DPH nepotvrzeno (zatím se nezobrazuje)
-- [ ] Ověřit e-mail po nasazení domény `tis-construction.cz` (teď `info@tis-cr.eu`)
+- [ ] Zvážit e-mail na vlastní doméně po nasazení `tis-construction.cz` (teď `tomasimlauf@tis-cr.eu`)
 - [ ] Roky u části realizací (hotel Kraskov, Pošívalka, chatky, stáj)
 - [ ] Nastavit `RESEND_API_KEY` a `POPTAVKA_FROM` ve Vercelu
 

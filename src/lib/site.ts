@@ -19,7 +19,7 @@ export const site = {
 } as const;
 
 export const contact = {
-  email: "info@tis-cr.eu",
+  email: "tomasimlauf@tis-cr.eu",
   phone: "+420 739 065 563",
   phoneHref: "tel:+420739065563",
   street: "K Májovu 1309",
@@ -36,8 +36,8 @@ export const contact = {
 export const addressLine = `${contact.street}, ${contact.district}, ${contact.postalCode}`;
 
 /**
- * Kam chodí poptávky z formuláře. Záměrně oddělené od veřejného
- * kontaktního e-mailu — ten zůstává na webu, tohle je interní adresát.
+ * Kam chodí poptávky z formuláře. Zatím shodné s veřejným kontaktem,
+ * ale drženo zvlášť — až firma zavede sběrnou adresu, změní se jen tady.
  * Lze přebít proměnnou POPTAVKA_TO.
  */
 export const inquiry = {
