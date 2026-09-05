@@ -43,3 +43,7 @@ next-env.d.ts
 
 # design source bundle
 *.zip
+
+# python bytecode z pomocných skriptů
+__pycache__/
+*.pyc
