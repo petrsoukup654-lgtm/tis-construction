@@ -41,14 +41,24 @@ function pretendOk() {
 }
 
 export async function POST(request: Request) {
-  // 1. Požadavek musí přijít z našeho webu, ne z cizí stránky nebo skriptu.
+  // 1. Požadavek musí přijít ze stránky téhož webu, ne z cizí stránky ani skriptu.
+  //
+  //    Porovnáváme origin proti hostiteli požadavku, ne proti pevnému seznamu
+  //    adres. Seznam se dřív rozešel se skutečností: web běží na www, apex na
+  //    něj jen přesměrovává, takže se neshodl a formulář vracel 403. Takhle
+  //    vyjde apex, www, preview deploy i localhost bez další údržby.
   const origin = request.headers.get("origin");
   if (origin) {
-    const allowed = new Set([site.url, "http://localhost:3000"]);
-    const vercelUrl = process.env.VERCEL_URL;
-    if (vercelUrl) allowed.add(`https://${vercelUrl}`);
-    if (![...allowed].some((base) => origin === base.replace(/\/$/, ""))) {
-      console.warn("Poptávka: cizí origin", origin);
+    const host =
+      request.headers.get("x-forwarded-host") ?? request.headers.get("host");
+    let sameOrigin = false;
+    try {
+      sameOrigin = host !== null && new URL(origin).host === host;
+    } catch {
+      sameOrigin = false;
+    }
+    if (!sameOrigin) {
+      console.warn("Poptávka: cizí origin", origin, "host", host);
       return NextResponse.json({ error: "Neplatný požadavek." }, { status: 403 });
     }
   }

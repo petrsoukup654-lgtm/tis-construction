@@ -13,7 +13,8 @@ export const site = {
   tagline: "Strojní a stavební realizace",
   description:
     "Dopravní systémy pro sypké materiály, ocelové konstrukce a kompletní stavební práce. Od projektu po předání. Chrudim, od roku 1997.",
-  url: "https://tis-construction.cz",
+  /** Kanonická adresa. Apex 308 přesměrovává na www, proto www. */
+  url: "https://www.tis-construction.cz",
   locale: "cs_CZ",
   founded: 1997,
 } as const;
