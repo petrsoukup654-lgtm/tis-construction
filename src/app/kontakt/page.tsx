@@ -67,12 +67,8 @@ export default function KontaktPage() {
                 <dt className="label-mono text-muted">Fakturační údaje</dt>
                 <dd className="mt-1 text-[1rem]">
                   IČ {contact.ico}
-                  {contact.dic ? (
-                    <>
-                      <br />
-                      DIČ {contact.dic}
-                    </>
-                  ) : null}
+                  <br />
+                  DIČ {contact.dic}
                 </dd>
               </div>
             </dl>

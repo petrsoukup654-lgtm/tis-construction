@@ -56,7 +56,7 @@ const organizationSchema = {
   email: contact.email,
   telephone: contact.phone,
   foundingDate: String(site.founded),
-  ...(contact.dic ? { vatID: contact.dic } : {}),
+  vatID: contact.dic,
   taxID: contact.ico,
   address: {
     "@type": "PostalAddress",

@@ -105,7 +105,8 @@ POPTAVKA_TO=tomasimlauf@tis-cr.eu
 ```
 
 **Dokud proměnné nejsou nastavené, formulář uživateli vrátí hlášku s e-mailovým
-kontaktem** místo tichého selhání.
+kontaktem** místo tichého selhání. Na produkci je zapojeno a odesílání ověřeno;
+doména `tis-construction.cz` je v Resendu ověřená.
 
 ### Ochrana proti spamu
 
@@ -142,10 +143,7 @@ v nastavení projektu na Vercelu.
 
 ## Co ještě chybí
 
-- [ ] Ověřit DIČ — IČ je `05613566`, plátcovství DPH nepotvrzeno (zatím se nezobrazuje)
 - [ ] Zvážit e-mail na vlastní doméně po nasazení `tis-construction.cz` (teď `tomasimlauf@tis-cr.eu`)
-- [ ] Roky u části realizací (hotel Kraskov, Pošívalka, chatky, stáj)
-- [ ] Nastavit `RESEND_API_KEY` a `POPTAVKA_FROM` ve Vercelu
 
 ## Nasazení
 

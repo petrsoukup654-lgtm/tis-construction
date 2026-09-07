@@ -76,7 +76,7 @@ export function ReferenceCard({ reference }: { reference: Reference }) {
         className="border border-border"
       />
       <p className="label-mono mt-3 text-muted">
-        {reference.year ? `${reference.year} · ${reference.tag}` : reference.tag}
+        {reference.tag}
       </p>
       <h3 className="h-card mt-1 text-[1.1875rem] font-semibold text-ink">
         {reference.title}

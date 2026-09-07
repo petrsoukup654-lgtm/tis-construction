@@ -29,8 +29,7 @@ export const contact = {
   postalCode: "537 01",
   city: "Chrudim",
   ico: "05613566",
-  /** Doplnit, až bude potvrzené plátcovství DPH. */
-  dic: null as string | null,
+  dic: "CZ05613566",
 } as const;
 
 /** Adresa v jednom řádku — ať se tvar nerozchází mezi patičkou a kontaktem. */
@@ -302,8 +301,6 @@ export function getDivision(slug: string): Division | undefined {
 
 export type Reference = {
   slug: string;
-  /** Volitelný — u části realizací není rok uvedený. */
-  year?: string;
   category: ReferenceCategory;
   /** Krátký štítek nad názvem, např. "SUŠÁRNA" nebo "REKONSTRUKCE" */
   tag: string;
@@ -345,7 +342,6 @@ export const references: Reference[] = [
   },
   {
     slug: "wellness-chrudim",
-    year: "2019",
     category: "Stavební",
     tag: "Wellness",
     title: "Rozšíření sauny o wellness prvky, Chrudim",
@@ -354,7 +350,6 @@ export const references: Reference[] = [
   },
   {
     slug: "autosalon-pardubice",
-    year: "2015–2016",
     category: "Stavební",
     tag: "Autosalon",
     title: "Výstavba autosalonu AUTO IN Pardubice",
@@ -363,7 +358,6 @@ export const references: Reference[] = [
   },
   {
     slug: "prejezd-slatinany",
-    year: "2015",
     category: "Stavební",
     tag: "Infrastruktura",
     title: "Renovace železničního přejezdu Slatiňany",
@@ -372,7 +366,6 @@ export const references: Reference[] = [
   },
   {
     slug: "ocelova-hala-havlickuv-brod",
-    year: "2019",
     category: "Stavební",
     tag: "Hala",
     title: "Výstavba ocelové haly v Havlíčkově Brodě",
@@ -381,7 +374,6 @@ export const references: Reference[] = [
   },
   {
     slug: "hala-stoky",
-    year: "2019",
     category: "Stavební",
     tag: "Hala",
     title: "Výstavba haly Štoky",
