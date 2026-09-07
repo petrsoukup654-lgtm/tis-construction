@@ -211,6 +211,11 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         error: `Zprávu se nepodařilo odeslat. Zkuste to prosím znovu, nebo nám napište na ${inquiry.email}.`,
+        // Samotný stavový kód poskytovatele — bez těla odpovědi, takže nic
+        // citlivého neuniká. Bez něj se selhání odesílání dá na produkci
+        // diagnostikovat jen čtením logů, ke kterým se nemusí být přístup.
+        // 401 = špatný klíč, 403 = neověřená doména, 422 = vadný požadavek.
+        upstreamStatus: response.status,
       },
       { status: 502 },
     );
